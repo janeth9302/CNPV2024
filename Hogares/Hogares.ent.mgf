@@ -1,0 +1,50 @@
+﻿0001 TIPO DE VIVIENDA %s incompatible con TIPO DE PARED %s
+0002 TIPO DE VIVIENDA %s incompatible con TIPO DE TECHO %s
+0003 TIPO DE VIVIENDA %s incompatible con TIPO DE PISO %s
+0004 El agua proveniente %s no puede estar dentro de la vivienda. Verifique
+0005 Verifique que el número de piezas en la vivienda que sea correcto %d. Recuerde no incluir ni pasillos ni baños
+0006 En una cuarteria no pueden haber mas de 3 piezas %d, verifique
+0007 Si existen trabajadores en esta vivienda que no regresan a su hogar familiar los fines de semana, deben de ser considerados como un hogar independiente
+0008 Verifique el número de hogares que ha ingresado %d
+0009 Previamente se respondió que la vivienda no estaba conectada a la red eléctrica. Verifique respuestas
+0010 Indicó que (%d) personas pertenecientes a este hogar se fueron a vivir a otro país. Verifique que todas las personas eran miembros de este hogar de acuerdo a las definiciones del censo
+0011 Indicó que la persona tenía (%d) años cuando se fué del país. Verifique que la edad de la persona sea la que tenía cuando salió del país, no la edad actual
+0012 La cantidad de personas es diferente al total de personas. %d
+0013 Verifique que solo se esten contabilizando a personas que pertenecian a este hogar de acuerdo a las definiciones de este censo y que fallecieron dentro del periodo de referencia
+0014 Ingrese nombre y apellido del fallecido
+0015 El año de llegada (%d) no puede ser menor al año de nacimiento (%d). Verifique
+0016 ¿Esta seguro que el total de personas en el hogar, de acuerdo a las definiciones del censo, es %d? Verifique
+0017 Este campo es obligatorio. No puede estar vacío
+0018 Solo se permiten letras
+0019 la Jefa, jefe o persona de referencia debe ser la 1
+0020 Edad de la Jefa, jefe o persona de referencia es menor de 12, Verifique
+0021 Indicó que la Jefa, jefe o persona de referencia del hogar tiene  años de edad. Verifique que la edad sea correcta y se trate de la jefa, jefe o persona de referencia
+0022 Indico que la edad del hijo (%D) es, mayor de 12 años con respecto a la edad de la Jefa o jefe, es correcto?
+0023 Indicó que con edad (%d) es nuera o yerno, asegurese de que la edad y relación de parentesco esta correcta
+0024 Indicó que la edad del Nieto es (%d) recuerde que debe ser menos de 24 años menor que la persona de referencia. Asegures de que la edad y relación de parentesco sea la correcta
+0025 Indicó que la edad de los padres (%d) recuerde que debe ser menos de 12 años mayor que la persona de referencia. Asegurese que la edad y la relación de parentesco sea la correcta
+0026 Indicó que la edad de los suegros es (%d), recuerde que debe ser mayor de 24 años
+0027 Indicó que es Cónyuge o pareja con edad (%d), recuerde que debe ser mayor de 12 años
+0028 El año (%d) no corresponde con edad reportada (%d). Verifique edad/año de nacimiento
+0029 Civil del Conyugue es distinto al estado civil del Jefe o persona de referencia
+0030 Años no coincide con el nivel educativo declarado
+0031 Finalizo sus estudios, pero el nivel mas alto que alcanzo en ninguno!
+0032 ADVERTENCIA!!!...Contestó que Estudia, pero no asiste en %d
+0033 ADVERTENCIA!!!...Muy menor para ser jubilado o pensionado, Edad= %d
+0034 ADVERTENCIA!!!...No estudia ni trabaja, Pero dice que asiste
+0035 Ingrese una ocupación válida ...
+0036 Edad de la madre menor a la cantidad de hijos
+0037 hijas vivas no puede ser mayor a la cantidad reportada en ¿Cuántas hijas nacidas ha tenido
+0038 Advertencia ! Acorde a la edad de la madre tiene más hijos(a) %d
+0039 Hijos vivos no puede ser mayor a la cantidad reportada en ¿Cuántos hijos nacidos ha tenido
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,13 @@
+﻿[Run Information]
+Version=CSPro 8.0
+AppType=Entry
+
+[Files]
+Application=.\Hogares.ent
+InputData=..\Dat\Hogares.csdb
+Paradata=.\Hogares.cslog
+
+[ExternalFiles]
+ALDEA_DICT=..\Dic\aldeas.csdb
+HPHC_VIVIENDA_DICT=..\Dat\Vivienda.csdb
+MUNICIPIO_DICT=..\Dic\munics.csdb

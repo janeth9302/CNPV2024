@@ -1,0 +1,880 @@
+﻿---
+fileType: Question Text
+version: CSPro 8.0
+languages:
+  - name: EN
+    label: English
+styles:
+  - name: Normal
+    className: normal
+    css: |
+      font-family: Arial;font-size: 16px;
+  - name: Instruction
+    className: instruction
+    css: |
+      font-family: Arial;font-size: 14px;color: #0000FF;
+  - name: Heading 1
+    className: heading1
+    css: |
+      font-family: Arial;font-size: 36px;
+  - name: Heading 2
+    className: heading2
+    css: |
+      font-family: Arial;font-size: 24px;
+  - name: Heading 3
+    className: heading3
+    css: |
+      font-family: Arial;font-size: 18px;
+questions:
+  - name: HPHC_HOGARES_DICT.H_DEPTO
+    conditions:
+      - questionText:
+          EN: |
+            Seleccione el departamento a trabajar<p></p>
+  - name: HPHC_HOGARES_DICT.H_MUN
+    conditions:
+      - questionText:
+          EN: |
+            Seleccione el municipio a trabajar<p></p>
+  - name: HPHC_HOGARES_DICT.H_SEGMENTO
+    conditions:
+      - questionText:
+          EN: |
+            Ingrese el numero de segmento<p></p>
+  - name: HPHC_HOGARES_DICT.H_ESTRUCTURA
+    conditions:
+      - questionText:
+          EN: |
+            Ingrese el tipo de estructura<p></p>
+  - name: HPHC_HOGARES_DICT.H_VIVIENDA
+    conditions:
+      - questionText:
+          EN: |
+            Ingrese el numero de vivienda en el recorrido<p></p>
+  - name: HPHC_HOGARES_DICT.V_V01_TIPO_VIV
+    conditions:
+      - questionText:
+          EN: |
+            <p><b><font color="#0000ff"><span style="font-size: 14px;">CARACTERÍSTICAS</span></font></b><b><font color="#0000ff"><span style="font-size: 14px;">&nbsp;DE LA VIVIENDA</span></font></b></p><p>Tipo de vivienda<br></p><p><span class="instruction"><font color="#ff0000" style="">﻿Esta variable se mide por observación</font></span></p><p></p>
+  - name: HPHC_HOGARES_DICT.V_V02_PAREDES_VIV
+    conditions:
+      - questionText:
+          EN: |
+            <p>¿Cuál es el material predominante en las paredes exteriores de la vivienda?<br></p><p><span class="instruction"><font color="#ff0000">Esta variable se mide por observación</font></span></p><p></p>
+  - name: HPHC_HOGARES_DICT.V_V03_TECHO_VIV
+    conditions:
+      - questionText:
+          EN: |
+            <p>¿Cuál es el material predominante en el techo de la vivienda?<br></p><p><span class="instruction"><font color="#ff0000">﻿Esta variable se mide por observación</font></span></p><p></p>
+  - name: HPHC_HOGARES_DICT.V_V04_OCUP_VIV
+    conditions:
+      - questionText:
+          EN: |
+            <p>¿Cuál es la condición de ocupación de esta vivienda?<br></p><p><span class="instruction"><font color="#ff0000">Esta variable se mide por observación</font></span></p><p></p>
+  - name: HPHC_HOGARES_DICT.V_V05_PISO_VIV
+    conditions:
+      - questionText:
+          EN: |
+            <p>¿Cuál es el material predominante en el piso de la vivienda?<br></p><p><span style="font-size: 14px;"><font color="#ff0000">Esta variable se mide por observación</font></span><br></p><p></p>
+  - name: HPHC_HOGARES_DICT.V_V06_DISPO_AGUA
+    conditions:
+      - questionText:
+          EN: |
+            <p>¿Cómo se obtiene el agua para la vivienda?<br></p><p></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.V_V07_PROV_AGUA
+    conditions:
+      - questionText:
+          EN: |
+            <p>¿De dónde proviene el agua que utiliza en la vivienda?<br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.V_V08_ACC_ALUM
+    conditions:
+      - questionText:
+          EN: |
+            <p>¿Está conectada esta vivienda a la red eléctrica?<br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.V_V10_ELIM_BASURA
+    conditions:
+      - questionText:
+          EN: |
+            <p>¿Cómo elimina la basura usualmente en esta vivienda?<br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.V_V12_PIEZAS_VIV
+    conditions:
+      - questionText:
+          EN: |
+            <p>¿Cuántas piezas tiene en total esta vivienda contando la cocina? (No cuente pasillos, garaje ni baños)<br></p><p><span class="instruction"><font color="#ff0000">No cuente pasillos ni baños</font></span></p><p></p>
+  - name: HPHC_HOGARES_DICT.V_V13_IDEN_HOGAR
+    conditions:
+      - questionText:
+          EN: |
+            <p>¿Todas las personas en esta vivienda comparten un presupuesto común para alimentos o se benfician?<br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.V_V14_GRU_HOGAR
+    conditions:
+      - questionText:
+          EN: |
+            Incluyendo el suyo, ¿cuántos grupos de personas u hogares hay en total?<p></p>
+  - name: HPHC_HOGARES_DICT.H_H07_PIEZA_DORMIR
+    conditions:
+      - questionText:
+          EN: |
+            <p><b><font color="#0000ff"><span style="font-size: 14px;">CARACTERÍSTICAS</span></font></b><b><font color="#0000ff"><span style="font-size: 14px;">&nbsp;DEL HOGAR</span></font></b><br></p><p>¿Cuántas piezas utiliza este hogar para dormir?<br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_H01_COCINA_HOG
+    conditions:
+      - questionText:
+          EN: |
+            <p>¿Tiene este hogar una pieza para cocinar?</p><p><br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_H02_USO_COCINA
+    conditions:
+      - questionText:
+          EN: |
+            <p>¿La pieza para cocinar solamente la utiliza este hogar?<br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_H03_COCINAN_CON
+    conditions:
+      - questionText:
+          EN: |
+            <p>¿Cocinan principalmente con...<br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_H04_SANIT_HOG
+    conditions:
+      - questionText:
+          EN: |
+            <p>¿Qué tipo de servicio sanitario o letrina tiene?<br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_H05_SANI_EXCLU
+    conditions:
+      - questionText:
+          EN: |
+            <p>El servicio sanitario, ¿Es de uso exclusivo del hogar?<br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_H06_N_REFRI
+    conditions:
+      - questionText:
+          EN: |
+            <p>Este hogar tiene:<br></p><p>1. Refrigeradora</p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_H06_O_ESTUFA
+    conditions:
+      - questionText:
+          EN: |
+            <p>2. Estufa de 4 hornillas o más<br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_H06_P_AIRE
+    conditions:
+      - questionText:
+          EN: |
+            <p>3. Aire acondicionado<br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_H06_M_LAVADORA
+    conditions:
+      - questionText:
+          EN: |
+            <p>4. Lavadora eléctrica<br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_H06_A_RADIO
+    conditions:
+      - questionText:
+          EN: |
+            <p>5. Algún aparato o dispositivo para oír radio<br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_H06_B_TV_1
+    conditions:
+      - questionText:
+          EN: |
+            <p>6. Televisor<br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_H06_C_PC_1
+    conditions:
+      - questionText:
+          EN: |
+            <p>7. Computadora (de escritorio o laptop)<br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_H06_E_TEL_FIJO
+    conditions:
+      - questionText:
+          EN: |
+            <p>8. Teléfono fijo (incluye celular fijo)?<br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_H06_F_TEL_CEL_1
+    conditions:
+      - questionText:
+          EN: |
+            <p>9. Teléfono celular o móvil<br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_H06_G_INTERNET
+    conditions:
+      - questionText:
+          EN: |
+            <p>10. Servicio de internet<br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_H06_H_CABLE
+    conditions:
+      - questionText:
+          EN: |
+            <p>11.<b style="color: rgb(0, 0, 255);">&nbsp;</b>Servicio de cable o satélite para televisión<br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_H06_I_CARRO_1
+    conditions:
+      - questionText:
+          EN: |
+            <p>12. Carros o automóviles<br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_H06_J_MOTO_1
+    conditions:
+      - questionText:
+          EN: |
+            <p>13. Motocicleta o mototaxi<br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_H06_K_LANCHA_1
+    conditions:
+      - questionText:
+          EN: |
+            <p>15. Lancha&nbsp; o pipante<br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.V_V11_TEN_VIVI
+    conditions:
+      - questionText:
+          EN: |
+            <p>La vivienda que ocupa este hogar es:<br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_H08_ACTIVIDADES
+    conditions:
+      - questionText:
+          EN: |
+            Aquí o en otro lugar ¿Usted o algún miembro de este hogar realizó durante el 2024 alguna de las siguientes:<p></p>
+  - name: HPHC_HOGARES_DICT.H_E01_TIEMPO
+    conditions:
+      - questionText:
+          EN: |
+            <p><b><font color="#0000ff"><span style="font-size: 14px;">EMIGRACIÓN INTERNACIONAL&nbsp;</span></font></b></p><p>¿En los últimos 10 años, a partir del 2014, cuántas personas que pertenecían a este hogar se fueron de Honduras a vivir a otro país y aún no han regresado?<br></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_E01_NUM_EMI
+    conditions:
+      - questionText:
+          EN: |
+            <p>¿Cuántas personas?<br></p><p></p><p></p>
+        helpText:
+          EN: |
+            Incluir definición de miembros del hogar.<p></p>
+  - name: HPHC_HOGARES_DICT.H_E02_SEXO_EMI
+    conditions:
+      - questionText:
+          EN: |
+            <p>Sexo de persona<b>&nbsp;<font color="#0000ff">"~~ORDEN_E~~"</font></b><br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_E03_EDAD_EMI
+    conditions:
+      - questionText:
+          EN: |
+            <p>Edad cuando se fue de Honduras persona&nbsp;<b><font color="#0000ff">"~~ORDEN_E~~"</font></b>&nbsp;<br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_E04_ANIO_EMI
+    conditions:
+      - questionText:
+          EN: |
+            <p>Año de partida de persona&nbsp;<b><font color="#0000ff">"~~ORDEN_E~~"</font></b>&nbsp;<br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_E05_RESI_EMI
+    conditions:
+      - questionText:
+          EN: |
+            <p>¿En qué país vive actualmente persona&nbsp;&nbsp;<b><font color="#0000ff">"~~ORDEN_E~~"</font></b>?<br></p><p></p>
+  - name: HPHC_HOGARES_DICT.ADD_ANOTHER_EMIGRACION
+    conditions:
+      - questionText:
+          EN: |
+            <p>¿Desea agregar otra persona?<br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_E06_REME_ANIO
+    conditions:
+      - questionText:
+          EN: |
+            <p>¿En los últimos 12 meses, entre [MES] de 2023 y [MES] de 2024, alguna persona de este hogar recibió dinero de personas que viven fuera de Honduras?<br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_E07_NO_DEST
+    conditions:
+      - questionText:
+          EN: |
+            <p>¿En este hogar, salio alguna persona que no llegó a su destino y no se sabe de su existencia o paradero?<br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_M01_TOTAL_MUERT
+    conditions:
+      - questionText:
+          EN: |
+            <p><b><font color="#0000ff"><span style="font-size: 14px;">MORTALIDAD</span></font></b></p>Incluyendo a los niños, niñas, ancianos y ancianas. Del 01 de noviembre del 2023 al 31 de octubre 2024 ¿murió alguna persona que pertenecía a este hogar?<br><p></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_M01_CUANTAS
+    conditions:
+      - questionText:
+          EN: |
+            <p>¿Cuantas personas?<br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_M02_MORT_NOMBRE
+    conditions:
+      - questionText:
+          EN: |
+            <p>Nombre y apellido de la persona que falleció<br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_M03_MORT_SEXO
+    conditions:
+      - questionText:
+          EN: |
+            <p>La persona era:<br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_M04_MORT_EDAD
+    conditions:
+      - questionText:
+          EN: |
+            <p>Edad al morir&nbsp;~~H_M02_MORT_NOMBRE~~&nbsp;<br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_MM01_MORT_CAUSA
+    conditions:
+      - questionText:
+          EN: |
+            <p>¿Fue la muerte de ~~H_M02_MORT_NOMBRE~~&nbsp;causada por accidente, violencia, homicidio o sucidio?&nbsp;<br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_MM02_MORT_EMB
+    conditions:
+      - questionText:
+          EN: |
+            <p>Si la persona fallecida era mujer entre 12 y 49 años, ¿murió&nbsp;<span style="font-size: 18px;">~~H_M02_MORT_NOMBRE~~</span>&nbsp;durante el embarazo, parto o puerperio?<br></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_MM03_MORT_EMB
+    conditions:
+      - questionText:
+          EN: |
+            ¿Cual fue la causa de su fallecimiento?<p></p>
+  - name: HPHC_HOGARES_DICT.H_ADD_ANOTHER_MORTALIDAD
+    conditions:
+      - questionText:
+          EN: |
+            <p><b><font color="#0000ff">~~capi~~</font></b></p><p><br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_CH00_NUM_PER
+    conditions:
+      - questionText:
+          EN: |
+            <font color="#0000ff"><span style="font-size: 14px;"><b>COMPOSICIÓN DEL HOGAR</b></span></font><p></p><p>Incluyendo a los recién nacidos, niños, niñas, ancianos, ancianas, empleados y empleadas domesticas con dormida adentro. <br>¿Cuántas personas en total residen habitualmente este hogar?<br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_CH01_NOMBRE
+    conditions:
+      - questionText:
+          EN: |
+            Nombre y Apellido. Comience por la jefa o jefe del hogar o por la persona de referencia.<br><p></p><p><font color="#0000ff"><span style="font-size: 16px;">El Jefe debe de tener al menos 12 años de edad.</span></font></p><p></p>
+        helpText:
+          EN: |
+            Pendiente: Aquí se agregará un texto que indique como proceder cuando el informante no quiera proporcionar nombres.<p></p>
+  - name: HPHC_HOGARES_DICT.H_CH05_PARENTESCO
+    conditions:
+      - questionText:
+          EN: |
+            Parentesco con el Jefe(a) de hogar de&nbsp;~~H_CH01_NOMBRE~~&nbsp;<br><p></p><p></p><p></p>
+        helpText:
+          EN: |
+            PENDIENTE: El cuestionario de viviendas colectivas. Este debe de tener un número limitado de las características de las personas. También, se debe distinguir entre viviendas colectivas institucionalizadas y no institucionalizadas.<p></p>
+  - name: HPHC_HOGARES_DICT.H_CH04_SEXO
+    conditions:
+      - questionText:
+          EN: |
+            Sexo de&nbsp;~~H_CH01_NOMBRE~~?<br><p></p><p></p>
+        helpText:
+          EN: |
+            PENDIENTE: Incluir definiciones de sexo y género. Se explicará que estos términos no son sinónimos y que el censo únicamente pregunta sexo, no género.<p></p>
+  - name: HPHC_HOGARES_DICT.H_CH02_EDAD
+    conditions:
+      - questionText:
+          EN: |
+            <p>Edad de&nbsp;~~H_CH01_NOMBRE~~<br></p><p></p><p></p>
+        helpText:
+          EN: |
+            Pendiente: Aquí se agregara un texto que indique como proceder cuando el informante no sepa o no quiera proporcionar las edades.<p></p>
+  - name: HPHC_HOGARES_DICT.H_CH03A_ANIO
+    conditions:
+      - questionText:
+          EN: |
+            <p>Ingrese un año:<br></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_CH03B_MES
+    conditions:
+      - questionText:
+          EN: |
+            <p>Seleccione un mes:<br></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_CH03C_DIA
+    conditions:
+      - questionText:
+          EN: |
+            <p>Ingrese el día:<br></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_ADD_ANOTHER_PERSONA
+    conditions:
+      - questionText:
+          EN: |
+            <p>¿Desea agregar otra persona?<br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_P03_PUEBLO
+    conditions:
+      - questionText:
+          EN: |
+            <p>¿&nbsp;<span style="font-size: 18px;">~~H_CH01_NOMBRE~~ es o se considera de algún&nbsp;</span>pueblo indígena, negro o afrodescendiente?</p><p><span class="instruction">﻿Lea la pregunta y opciones de respuesta tal y como se encuentran escritas en el aplicativo. No ingrese respuesta basado en observación propia.</span><br></p><p></p>
+        helpText:
+          EN: |
+            Pendiente<p></p>
+  - name: HPHC_HOGARES_DICT.H_P03_ESPECIFIQUE
+    conditions:
+      - questionText:
+          EN: |
+            <p>Otro pueblo indígena&nbsp;<span style="font-size: 18px;">~~H_CH01_NOMBRE~~</span>?<br></p><p>Especifique&nbsp;</p><p></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_P04_LENGUAMAT
+    conditions:
+      - questionText:
+          EN: |
+            <p>¿Cuál es la lengua materna de&nbsp;<span style="font-size: 18px;">~~H_CH01_NOMBRE~~</span>?<br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_P05A_MATERNA
+    conditions:
+      - questionText:
+          EN: |
+            <p>¿&nbsp;<span style="font-size: 18px;">~~H_CH01_NOMBRE~~ habla su lengua materna</span>?<br></p><p><br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_P05B_ESPANOL
+    conditions:
+      - questionText:
+          EN: |
+            <p>¿Puede&nbsp;<span style="font-size: 18px;">~~H_CH01_NOMBRE~~</span>&nbsp;mantener una conversación en español?<br></p><p></p><p></p>
+        helpText:
+          EN: |
+            <p>Únicamente se preguntará a personas que se identifiquen como afrohondurenos, indígenas o miembros de pueblos originario.</p><p>Esta pregunta sólo se realizará a los mayores de 2 años, ya que a esta edad se comienza a adquirir el habla.</p><p></p>
+  - name: HPHC_HOGARES_DICT.H_P06A_VER
+    conditions:
+      - questionText:
+          EN: |
+            <p class="MsoNormal" align="center" style="text-align: left;"><span style="font-size: 14px;"><font color="#0000ff"><b>DIFICULTADES FÍSICAS,
+            INTELECTUALES, SENSORIALES O PSICOSOCIALES</b></font></span><span style="font-family:&quot;Arial&quot;,sans-serif"><o:p></o:p></span></p><p>¿Tiene&nbsp;~~H_CH01_NOMBRE~~&nbsp;deficiencia o dificultad para: Ver incluso usando lentes recetados<br></p><p><br></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_P06B_VER_C
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size: 18px;">~~H_CH01_NOMBRE~~</span>&nbsp; Es por:<br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_P07A_OIR
+    conditions:
+      - questionText:
+          EN: |
+            <p>¿Tiene&nbsp;<span style="font-size: 18px;">~~H_CH01_NOMBRE~~</span>&nbsp;deficiencia o dificultad para: Oír incluso usando aparato auditivo<br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_P07B_OIR_C
+    conditions:
+      - questionText:
+          EN: |
+            <p>&nbsp;<span style="font-size: 18px;">~~H_CH01_NOMBRE~~</span>&nbsp;Es por:<br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_P08A_CAMINAR
+    conditions:
+      - questionText:
+          EN: |
+            <p>¿Tiene&nbsp;<span style="font-size: 18px;">~~H_CH01_NOMBRE~~</span>&nbsp;deficiencia o dificultad para: Caminar, subir o bajar gradas<br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_P08D_CAMINAR_E
+    conditions:
+      - questionText:
+          EN: |
+            <p>&nbsp;<span style="font-size: 18px;">~~H_CH01_NOMBRE~~</span>&nbsp;Es por:<br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_P09A_RECORDAR
+    conditions:
+      - questionText:
+          EN: |
+            <p>¿Tiene&nbsp;<span style="font-size: 18px;">~~H_CH01_NOMBRE~~</span>&nbsp;deficiencia o dificultad para: Recordar y/o concentrarse<br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_P09B_RECORDAR_C
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size: 18px;">~~H_CH01_NOMBRE~~</span>&nbsp;Es por:<br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_P10A_VALERSE
+    conditions:
+      - questionText:
+          EN: |
+            <p>¿Tiene&nbsp;<span style="font-size: 18px;">~~H_CH01_NOMBRE~~</span>&nbsp;deficiencia o dificultad para: Valerse por si mismo,
+            como bañarse o vestirse<br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_P10B_VALERSE_C
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size: 18px;">~~H_CH01_NOMBRE~~</span>&nbsp;Es por:<br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_P11A_COMUNI
+    conditions:
+      - questionText:
+          EN: |
+            <p>¿Tiene&nbsp;<span style="font-size: 18px;">~~H_CH01_NOMBRE~~</span>&nbsp;deficiencia o dificultad para: Comunicarse (hablar o
+            expresarse)<br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_P11B_COMUNI_C
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size: 18px;">~~H_CH01_NOMBRE~~</span>&nbsp;Es por:<br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_P14A_LUGAR_NA
+    conditions:
+      - questionText:
+          EN: |
+            <p><b><font color="#0000ff"><span style="font-size: 14px;">LUGAR DE NACIMIENTO Y RESIDENCIA PREVIA</span></font></b></p><p>¿Dónde vivía la madre de&nbsp;<span style="font-size: 18px;">~~H_CH01_NOMBRE~~</span>&nbsp;&nbsp;cuando&nbsp;<span style="font-size: 18px;">~~H_CH01_NOMBRE~~</span>&nbsp;&nbsp;nació?<br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_P14B_NA_OTR_MU
+    conditions:
+      - questionText:
+          EN: |
+            <p>¿En qué municipio vivía la madre de&nbsp;<span style="font-size: 18px;">~~H_CH01_NOMBRE~~</span>&nbsp;&nbsp;cuando&nbsp;<span style="font-size: 18px;">~~H_CH01_NOMBRE~~</span>&nbsp;&nbsp;nació?<br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_P14C_NA_PAIS
+    conditions:
+      - questionText:
+          EN: |
+            <p>¿En que país nació&nbsp;<span style="font-size: 18px;">~~H_CH01_NOMBRE~~</span>&nbsp;?<br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_P15A_LLEGA_ANIO
+    conditions:
+      - questionText:
+          EN: |
+            <p>¿En qué año llegó&nbsp;<span style="font-size: 18px;">~~H_CH01_NOMBRE~~</span>&nbsp;&nbsp;a vivir a Honduras?<br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_P15B_LLEGA_MES
+    conditions:
+      - questionText:
+          EN: |
+            <p><b><font color="#0000ff">~~capi~~</font></b></p><p>¿En qué mes llegó&nbsp;<span style="font-size: 18px;">~~H_CH01_NOMBRE~~</span>&nbsp;&nbsp;a vivir a Honduras?</p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_P16A_MUNI_SIEMP
+    conditions:
+      - questionText:
+          EN: |
+            <p>¿Siempre ha vivido en este municipio desde que nació o llegó a Honduras?<br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_P16B_MUNI_VIVIA
+    conditions:
+      - questionText:
+          EN: |
+            <p>¿En qué municipio vivía&nbsp;<span style="font-size: 18px;">~~H_CH01_NOMBRE~~</span>&nbsp;&nbsp;antes de venirse a vivir a este municipio?<br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_P16C_VIVIA_PAIS
+    conditions:
+      - questionText:
+          EN: |
+            <p>¿En qué país vivía&nbsp;~~H_CH01_NOMBRE~~&nbsp;antes de venirse a vivir a este municipio?<br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_P17_MUNIC_ANIO
+    conditions:
+      - questionText:
+          EN: |
+            <p>¿En qué año llegó&nbsp;<span style="font-size: 18px;">~~H_CH01_NOMBRE~~</span>&nbsp;&nbsp;a vivir a este municipio?<br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_P18_RAZON_VINO
+    conditions:
+      - questionText:
+          EN: |
+            <p>¿Cuál fue la razón por la que&nbsp;<span style="font-size: 18px;">~~H_CH01_NOMBRE~~</span>&nbsp;se vino a vivir a este municipio?<br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_P19_INSCRI_RNP
+    conditions:
+      - questionText:
+          EN: |
+            <p>¿<span style="font-size: 18px;">~~H_CH01_NOMBRE~~</span>&nbsp;está inscrita(o) en el Registro Nacional de las Personas?<br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_P20_ESTA_CIVIL
+    conditions:
+      - questionText:
+          EN: |
+            <p>¿Cuál es el estado civil actual de&nbsp;<span style="font-size: 18px;">~~H_CH01_NOMBRE~~</span>?<br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_P22_ASISTEN_EDU
+    conditions:
+      - questionText:
+          EN: |
+            <p>¿<span style="font-size: 18px;">~~H_CH01_NOMBRE~~ <span style="font-size: 16px;">asiste ó&nbsp;</span></span>asistió&nbsp;&nbsp;a un centro educativo presencial o virtual ?<br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_P23A_NIVEL_EDUC
+    conditions:
+      - questionText:
+          EN: |
+            <p>¿Cuál es el nivel y grado más alto que&nbsp;<span style="font-size: 18px;">~~H_CH01_NOMBRE~~</span>&nbsp;aprobó?<br></p><p><b><font color="#0000ff">Ingrese el nivel:</font></b></p><p><span class="instruction">Tener cuidado de no confundir la asistencia escolar (actual) al nivel y grado aprobados más altos (pasado)</span><br></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_P23B_GRADO_EDUC
+    conditions:
+      - questionText:
+          EN: |
+            <p>¿Cuál es el nivel y grado más alto que&nbsp;<span style="font-size: 18px;">~~H_CH01_NOMBRE~~</span>&nbsp;aprobó?<br></p><p><b><font color="#ff0000">Ingrese el grado:</font></b></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_P25_ULTI_CARR
+    conditions:
+      - questionText:
+          EN: |
+            <p>¿Cuál es el nombre de la carrera o especialidad del último año aprobado?<br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_P24_FIN_CARR
+    conditions:
+      - questionText:
+          EN: |
+            <p>¿Finalizó&nbsp;<span style="font-size: 18px;">~~H_CH01_NOMBRE~~</span>&nbsp;esa carrera o especialidad?<br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_P21_LEER_ESCRI
+    conditions:
+      - questionText:
+          EN: |
+            <p><b><font color="#0000ff"><span style="font-size: 14px;">EDUCACIÓN</span></font></b></p><p>¿Sabe&nbsp;<span style="font-size: 18px;">~~H_CH01_NOMBRE~~&nbsp;</span>leer y escribir?<br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_P26_A_PC
+    conditions:
+      - questionText:
+          EN: |
+            <p><b><font color="#0000ff"><span style="font-size: 14px;">USO DE LA TECNOLOGIA</span></font></b></p><p>¿En los últimos tres meses&nbsp;<span style="font-size: 18px;">~~H_CH01_NOMBRE~~</span>&nbsp;ha usado alguna de las siguientes tecnologías de informacíon y comunicacíon?<br></p><p><b>Computadora</b></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_P26_B_USO_TABLE
+    conditions:
+      - questionText:
+          EN: |
+            <p><b>&nbsp;Tablet</b><br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_P26_C_USO_CEL
+    conditions:
+      - questionText:
+          EN: |
+            <p><b>Telefono celular</b><br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_P26_D_USO_INTER
+    conditions:
+      - questionText:
+          EN: |
+            <p><b>Internet</b><br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_P27_SEM_PAS_TRA
+    conditions:
+      - questionText:
+          EN: |
+            <p><b><font color="#0000ff"><span style="font-size: 14px;">TRABAJO Y EMPLEO&nbsp;</span></font></b></p><p><span style="color: rgb(0, 0, 255);">Ahora le voy a hacer una serie de preguntas acerca de la ocupación o actividades diarias de </span><span style="color: rgb(0, 0, 255); font-size: 18px;">~~H_CH01_NOMBRE~~</span><span style="color: rgb(0, 0, 255);">.</span><br></p><p>La semana pasada, del [DÍA/MES] al [DÍA/MES].&nbsp;<span style="font-size: 18px;">~~H_CH01_NOMBRE~~</span>:</p><p></p>
+        helpText:
+          EN: |
+            Link a sección de Características Económicas en el manual de empadronador<p></p>
+  - name: HPHC_HOGARES_DICT.H_P28_AUTOCONSUMO
+    conditions:
+      - questionText:
+          EN: |
+            <p>Los productos agropecuarios en los que&nbsp;<span style="font-size: 18px;">~~H_CH01_NOMBRE~~</span>&nbsp;trabajó están destinados principalmente para:<br></p><p></p><p></p>
+        helpText:
+          EN: |
+            Link a sección de Características Económicas en el manual de empadronador<p></p>
+  - name: HPHC_HOGARES_DICT.H_P29_ACTI_REALI
+    conditions:
+      - questionText:
+          EN: |
+            <p>La semana pasada,&nbsp;<span style="font-size: 18px;">~~H_CH01_NOMBRE~~</span>:<br></p><p></p><p></p>
+        helpText:
+          EN: |
+            Link a sección de Características Económicas en el manual de empadronador<p></p>
+  - name: HPHC_HOGARES_DICT.H_P30_BUSC_TRAB
+    conditions:
+      - questionText:
+          EN: |
+            <p>En las últimas cuatro semanas, ¿<span style="font-size: 18px;">~~H_CH01_NOMBRE~~</span>&nbsp;buscó trabajo o trató de iniciar un negocio (propio o sociedad)?<br></p><p></p><p></p>
+        helpText:
+          EN: |
+            Link a sección de Características Económicas en el manual de empadronador<p></p>
+  - name: HPHC_HOGARES_DICT.H_P31_DISPONIBI
+    conditions:
+      - questionText:
+          EN: |
+            <p>¿Si le ofrecieran un trabajo u oportunidad de negocio&nbsp;<span style="font-size: 18px;">~~H_CH01_NOMBRE~~</span>&nbsp; podría empezar a trabajar en las siguientes dos semanas?&nbsp;<br></p><p></p><p></p>
+        helpText:
+          EN: |
+            Link a sección de Características Económicas en el manual de empadronador<p></p>
+  - name: HPHC_HOGARES_DICT.H_P32_ACT_PRINC
+    conditions:
+      - questionText:
+          EN: |
+            <p>Cuál de las siguientes actividades describe lo que&nbsp;<span style="font-size: 18px;">~~H_CH01_NOMBRE~~</span>&nbsp;&nbsp;principalmente hace&nbsp;<br></p><p></p><p></p>
+        helpText:
+          EN: |
+            Link a sección de Características Económicas en el manual de empadronador<p></p>
+  - name: HPHC_HOGARES_DICT.H_P33_OCUPACION
+    conditions:
+      - questionText:
+          EN: |
+            <p>¿Cuál es la ocupación principal de&nbsp;<span style="font-size: 18px;">~~H_CH01_NOMBRE~~</span>&nbsp;?<br></p><p></p>
+        helpText:
+          EN: |
+            Link a sección de Características Económicas en el manual de empadronador<p></p>
+  - name: HPHC_HOGARES_DICT.H_P34_INDUSTRIA
+    conditions:
+      - questionText:
+          EN: |
+            <p>¿Qué produce o a que se dedica principalmente el establecimiento donde&nbsp;<span style="font-size: 18px;">~~H_CH01_NOMBRE~~</span>&nbsp;trabaja?<br></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_P35_LUGAR_TRAB
+    conditions:
+      - questionText:
+          EN: |
+            <p>¿Habitualmente&nbsp;<span style="font-size: 18px;">~~H_CH01_NOMBRE~~</span>&nbsp;trabaja?<br></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_P36_MUNI_TRAB
+    conditions:
+      - questionText:
+          EN: |
+            <p>¿En qué municipio está ubicado el lugar de trabajo de&nbsp;<span style="font-size: 18px;">~~H_CH01_NOMBRE~~</span>?<br></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_P37_OT_MUN_TRAB
+    conditions:
+      - questionText:
+          EN: |
+            <p>¿En qué otro municipio dentro del país&nbsp;<span style="font-size: 18px;">~~H_CH01_NOMBRE~~</span>?<br></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_P38_OT_PAI_TRAB
+    conditions:
+      - questionText:
+          EN: |
+            <p>¿En otro país&nbsp;<span style="font-size: 18px;">~~H_CH01_NOMBRE~~?</span><br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_P39_TRABAJ_COMO
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="font-size: 18px;">~~H_CH01_NOMBRE~~</span>trabaja como:<br></p><p></p><p></p>
+        helpText:
+          EN: |
+            Descripcion de los conceptos que comprende la categoria ocupacional con el objetivo que los empadronadores puedan exponer los conceptos o reforzar los mismos.<p></p>
+  - name: HPHC_HOGARES_DICT.H_P40_ACTI_AGRO
+    conditions:
+      - questionText:
+          EN: |
+            <p>La semana pasada&nbsp;<span style="font-size: 18px;">~~H_CH01_NOMBRE~~</span>, ¿hizo alguna de las siguientes actividades agropecuarias principalmente para el consumo propio del hogar?<br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_F01_HIJAS
+    conditions:
+      - questionText:
+          EN: |
+            <p><b><font color="#0000ff"><span style="font-size: 14px;">FERTILIDAD</span></font></b></p><p><span style="color: rgb(0, 0, 255);">Ahora le voy a preguntar por sus hijos, primero por sus hijas mujeres y después por sus hijos hombres</span><br></p><p>¿Cuántas hijas nacidas vivas ha tenido&nbsp;<span style="font-size: 18px;">~~H_CH01_NOMBRE~~</span>?</p><p></p>
+  - name: HPHC_HOGARES_DICT.H_F02_HIJAS_VIVAS
+    conditions:
+      - questionText:
+          EN: |
+            <p>¿Cuántas de las hijas de&nbsp;<span style="font-size: 18px;">~~H_CH01_NOMBRE~~&nbsp;</span>están vivas?<br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_F03_HIJAS_MUERT
+    conditions:
+      - questionText:
+          EN: |
+            <p>¿Cuántas de estas hijas de&nbsp;<span style="font-size: 18px;">~~H_CH01_NOMBRE~~</span>&nbsp;han fallecido?<br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_F04_HIJOS
+    conditions:
+      - questionText:
+          EN: |
+            <p><span style="color: rgb(0, 0, 255);">Ahora le voy a preguntar por sus hijos hombres</span><br></p><p>¿Cuántos hijos nacidos vivos ha tenido&nbsp;<span style="font-size: 18px;">~~H_CH01_NOMBRE~~</span>?</p><p></p>
+  - name: HPHC_HOGARES_DICT.H_F05_HIJOS_VIVOS
+    conditions:
+      - questionText:
+          EN: |
+            <p>¿Cuántos de los hijos de&nbsp;<span style="font-size: 18px;">~~H_CH01_NOMBRE~~</span>&nbsp;están vivos?<br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_F06_HIJOS_MUERT
+    conditions:
+      - questionText:
+          EN: |
+            <p>¿Cuántos de estos hijos de&nbsp;<span style="font-size: 18px;">~~H_CH01_NOMBRE~~</span>&nbsp;han fallecido?<br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_F07_ANIO_NAC
+    conditions:
+      - questionText:
+          EN: |
+            <p>¿En que fecha nació la última hija o hijo nacido vivo de&nbsp;<span style="font-size: 18px;">~~H_CH01_NOMBRE~~</span>?<br></p><p><b>Año:</b></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_F07_MES_NAC
+    conditions:
+      - questionText:
+          EN: |
+            <p><b>Mes:</b><br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_F08_SEXO_ULTIMO
+    conditions:
+      - questionText:
+          EN: |
+            <p>¿Cuál es el sexo de la última hija o hijo nacido vivo de&nbsp;<span style="font-size: 18px;">~~H_CH01_NOMBRE~~</span>?<br></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_F09_VIVO_ULTIMO
+    conditions:
+      - questionText:
+          EN: |
+            <p>¿Vive actualmente la última hija o hijo nacido vivo de&nbsp;<span style="font-size: 18px;">~~H_CH01_NOMBRE~~</span>?<br></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_F10_EDAD_EMB
+    conditions:
+      - questionText:
+          EN: |
+            <p>¿A qué edad&nbsp;<span style="font-size: 18px;">~~H_CH01_NOMBRE~~</span>&nbsp;fue su primer embarazo?<br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_CONCLUIR_ENTREVISTA
+    conditions:
+      - questionText:
+          EN: |
+            <b><font color="#0000ff">~~capi~~</font></b><p></p>
+  - name: HPHC_HOGARES_DICT.H_CH06_VERIFICA
+    conditions:
+      - questionText:
+          EN: |
+            <p>¿Ha incluido a todas las personas que habitualmente viven en este hogar, incluyendo aquellas que trabajan en otros hogares y que llegan a dormir el fin de semana a esta vivienda, asi como ninos recien nacidos y personas mayores?</p><p></p><p><span style="color: rgb(0, 0, 255); font-size: 14px;">﻿“Las personas que trabajan en otro lugar durante la semana y que regresan al domicilio familiar los fines de semana deben considerar el domicilio familiar como su lugar de residencia habitual”. (P&amp;R p. 179).</span><br></p><p></p>
+        helpText:
+          EN: |
+            Esta pregunta auxiliar se incluye para evitar la no enumeración o doble enumeración de las personas que laboran y residen en sus lugares de trabajo durante la semana y regresan a sus lugares de residencia de sus familiares o sus residencias habituales el fin de semana.<p></p>
+  - name: HPHC_HOGARES_DICT.H_F07_DIA_NAC
+    conditions:
+      - questionText:
+          EN: |
+            <p><b><font color="#0000ff">~~capi~~</font></b></p><p>¿En que fecha nació la última hija o hijo nacido vivo de&nbsp;<span style="font-size: 18px;">~~H_CH01_NOMBRE~~</span>?</p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_H06_B_TV
+    conditions:
+      - questionText:
+          EN: |
+            <p><b><font color="#0000ff">~~capi~~</font></b><br></p><p>Televisor (cuántos)<br></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_H06_C_PC
+    conditions:
+      - questionText:
+          EN: |
+            <p><b><font color="#0000ff">~~capi~~</font></b></p><p>Computadora (de escritorio o laptop) (cuántos)<br></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_H06_D_TABLET
+    conditions:
+      - questionText:
+          EN: |
+            <p><b><font color="#0000ff">~~capi~~</font></b></p><p>4. ¿Tiene alguna tablet este hogar?</p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_H06_F1_CELSMART
+    conditions:
+      - questionText:
+          EN: |
+            //not in specifications<p></p>
+  - name: HPHC_HOGARES_DICT.H_H06_F_TEL_CEL
+    conditions:
+      - questionText:
+          EN: |
+            <p><b><font color="#0000ff">~~capi~~</font></b></p><p>¿Cuántos teléfonos celulares o móviles tiene este hogar?</p><p></p>
+  - name: HPHC_HOGARES_DICT.H_H06_I_CARRO
+    conditions:
+      - questionText:
+          EN: |
+            <p><b><font color="#0000ff">~~capi~~</font></b></p><p>¿Cuántos carros o automóviles tiene este hogar?</p><p></p>
+  - name: HPHC_HOGARES_DICT.H_H06_J_MOTO
+    conditions:
+      - questionText:
+          EN: |
+            <p><b><font color="#0000ff">~~capi~~</font></b></p><p>¿Cuántas motocicletas o mototaxis para transporte tiene este hogar?</p><p></p>
+  - name: HPHC_HOGARES_DICT.H_H06_K_BICI
+    conditions:
+      - questionText:
+          EN: |
+            <p><b><font color="#0000ff">~~capi~~</font></b></p><p>¿Cuántas bicicletas para transporte tiene este hogar?</p><p></p>
+  - name: HPHC_HOGARES_DICT.H_H06_K_BICI_1
+    conditions:
+      - questionText:
+          EN: |
+            <p>14. Bicicletas<br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_H06_K_LANCHA
+    conditions:
+      - questionText:
+          EN: |
+            <p><b><font color="#0000ff">~~capi~~&nbsp;</font></b></p><p>¿Cuántas lanchas para transporte o pipante tiene este hogar?</p><p></p>
+  - name: HPHC_HOGARES_DICT.H_H06_Q_MOTOR
+    conditions:
+      - questionText:
+          EN: |
+            <p><b><font color="#0000ff">~~capi~~</font></b></p><p>17. ¿Este hogar tiene generador de energía eléctrica, planta o motor?</p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_M05A_MORT_ANIO
+    conditions:
+      - questionText:
+          EN: |
+            <p><b><font color="#0000ff">~~capi~~</font></b></p><p>Año</p><p><br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_M05B_MORT_MES
+    conditions:
+      - questionText:
+          EN: |
+            <p><b><font color="#0000ff">~~capi~~</font></b></p><p>Mes</p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_M05C_MORT_DIA
+    conditions:
+      - questionText:
+          EN: |
+            <p><b><font color="#0000ff">~~capi~~</font></b></p><p>Dia</p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_MM03_MORT_PARTO
+    conditions:
+      - questionText:
+          EN: |
+            <p><b><font color="#0000ff">~~capi~~</font></b></p><p>¿<span style="font-size: 18px;">~~H_M02_MORT_NOMBRE~~</span>&nbsp;murió en labor de parto?</p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_MM04_MORT_SEISM
+    conditions:
+      - questionText:
+          EN: |
+            <p><b><font color="#0000ff">~~capi~~</font></b></p><p>¿<span style="font-size: 18px;">~~H_M02_MORT_NOMBRE~~</span>&nbsp;murió dentro de las seis semanas después del parto o de la terminación del embarazo?</p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_P01_AFRODES
+    conditions:
+      - questionText:
+          EN: |
+            <p><b><font color="#0000ff"><span style="font-size: 14px;">CARACTERÍSTICAS DE LAS PERSONAS</span></font></b></p><p><span style="color: rgb(0, 0, 255);">Ahora le voy hacer unas preguntas acerca de las caracteristicas de las personas del hogar, vamos iniciar con el tema de etnicidad</span><br></p><p><span style="font-size: 16px;">¿</span><span style="font-size: 16px;">~~H_CH01_NOMBRE~~</span><span style="font-size: 16px;">&nbsp;se considera o identifica como indígena, negro o afrodescendiente?</span></p><p><span class="instruction"><font color="#ff0000">Lea la pregunta y opciones de respuesta tal y como se encuentran escritas en el aplicativo. No ingrese respuesta basado en observación propia.</font></span><br></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_P02_INDIGENA
+    conditions:
+      - questionText:
+          EN: |
+            <p><b><font color="#0000ff">~~capi~~</font></b><br></p><p>¿<span style="font-size: 18px;">~~H_CH01_NOMBRE~~</span>&nbsp;se considera o identifica como indigena?</p><p><span class="instruction">﻿Lea la pregunta y opciones de respuesta tal y como se encuentran escritas en el aplicativo. No ingrese respuesta basado en observación propia.</span><br></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_P08B_CAMINAR_C
+    conditions:
+      - questionText:
+          EN: |
+            <p><b><font color="#0000ff">~~capi~~</font></b></p><p>¿Utiliza&nbsp;<span style="font-size: 18px;">~~H_CH01_NOMBRE~~</span>&nbsp;algún medio/aparato de ayuda técnica o necesita ayuda para desarrollar su vida diaria?<br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_P08C_CAMINAR_D
+    conditions:
+      - questionText:
+          EN: |
+            <p><b><font color="#0000ff">~~capi~~</font></b></p><p>¿Utiliza&nbsp;<span style="font-size: 18px;">~~H_CH01_NOMBRE~~</span>&nbsp;alguno de los siguientes elementos?<br></p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_P11C_COMUNIC_D
+    conditions:
+      - questionText:
+          EN: |
+            <p><b><font color="#0000ff">~~capi~~</font></b></p><p>¿Utiliza&nbsp;<span style="font-size: 18px;">~~H_CH01_NOMBRE~~</span>&nbsp;otras formas de comunicación (habladas o escritas para expresarse) como ser:</p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_P12_COND_MENTAL
+    conditions:
+      - questionText:
+          EN: |
+            <p><b><font color="#0000ff">~~capi~~</font></b></p><p>¿Tiene&nbsp;<span style="font-size: 18px;">~~H_CH01_NOMBRE~~</span>&nbsp;alguna condición de salud mental diagnosticada por profesionales de la salud? Como trastorno afectivo bipolar, trastorno depresivo mayor, distimia, autismo, esquizofrenia, etcétera...</p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_P13_S_DOWN
+    conditions:
+      - questionText:
+          EN: |
+            <p><b><font color="#0000ff">~~capi~~</font></b></p><p>¿Tiene&nbsp;<span style="font-size: 18px;">~~H_CH01_NOMBRE~~</span>&nbsp;&nbsp;Síndrome de Down?</p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_P26_E_USO_RADIO
+    conditions:
+      - questionText:
+          EN: |
+            <p><b><font color="#0000ff">~~capi~~</font></b></p><p>Radio</p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_P26_F_USO_TV
+    conditions:
+      - questionText:
+          EN: |
+            <p><b><font color="#0000ff">~~capi~~</font></b></p><p>Televisión</p><p></p><p></p>
+  - name: HPHC_HOGARES_DICT.H_P26_G_USO_CORREO
+    conditions:
+      - questionText:
+          EN: |
+            <p><b><font color="#0000ff">~~capi~~</font></b></p><p>Correo electronico<p></p></p>
+  - name: HPHC_HOGARES_DICT.V_V09_ALUM_PRINC
+    conditions:
+      - questionText:
+          EN: |
+            <p>¿Cuál es el principal tipo de alumbrado que utiliza?<br></p><p><span class="instruction"><font color="#ff0000">Este campo es obligatoria, elija al menos una opción.</font></span></p><p></p>
+...

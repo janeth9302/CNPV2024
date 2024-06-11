@@ -1,0 +1,45 @@
+﻿[FormFile]
+Version=CSPro 8.0
+Name=MENU_FF
+Label=Menu
+DefaultTextFont=-013 0000 0000 0000 0700 0000 0000 0000 0000 0000 0000 0000 0000 Arial
+FieldEntryFont=0018 0000 0000 0000 0600 0000 0000 0000 0000 0000 0000 0000 0000 Courier New
+Type=SystemControlled
+  
+[Dictionaries]
+File=..\Dic\Menu.dcf
+  
+[Form]
+Name=FORM000
+Label=Menu Level
+Level=1
+Size=480,151
+  
+Item=MENU
+  
+[EndForm]
+  
+[Level]
+Name=MENU_LEVEL
+Label=Menu Level
+  
+[Group]
+Required=Yes
+Name=MENU_LEVEL_FORM
+Label=Menu Level
+Form=1
+Max=1
+  
+[Field]
+Name=MENU
+Position=255,106,270,126
+Item=MENU,MENU_DICT
+DataCaptureType=RadioButton
+Form=1
+  
+[Text]
+Position=309,109,455,125
+Text=Seleccione una opción
+ 
+[EndGroup]
+  

@@ -1,0 +1,81 @@
+{
+  "software": "CSPro", 
+  "version": 8.0, 
+  "fileType": "application", 
+  "type": "entry", 
+  "name": "MENU", 
+  "label": "Menu", 
+  "dictionaries": [
+    {
+      "type": "input", 
+      "path": "../Dic/Menu.dcf", 
+      "parent": "Menu.fmf"
+    }, 
+    {
+      "type": "external", 
+      "path": "../Dic/Hogares.dcf"
+    }
+  ], 
+  "forms": [
+    "Menu.fmf"
+  ], 
+  "questionText": [
+    "Menu.ent.qsf"
+  ], 
+  "code": [
+    {
+      "type": "main", 
+      "path": "Menu.ent.apc"
+    }
+  ], 
+  "messages": [
+    "Menu.ent.mgf"
+  ], 
+  "logicSettings": {
+    "version": 2.0, 
+    "caseSensitive": {
+      "symbols": false
+    }, 
+    "actionInvoker": {
+      "accessFromExternalCaller": "promptIfNoValidAccessToken", 
+      "convertResultsForLogic": true
+    }
+  }, 
+  "properties": {
+    "askOperatorId": false, 
+    "autoAdvanceOnSelection": false, 
+    "caseTree": "mobileOnly", 
+    "centerForms": true, 
+    "createListing": false, 
+    "createLog": false, 
+    "decimalMark": "dot", 
+    "displayCodesAlongsideLabels": false, 
+    "notes": {
+      "delete": "all", 
+      "edit": "all"
+    }, 
+    "partialSave": {
+      "operatorEnabled": true
+    }, 
+    "showEndCaseMessage": false, 
+    "showOnlyDiscreteValuesInComboBoxes": false, 
+    "showFieldLabels": false, 
+    "showErrorMessageNumbers": false, 
+    "showQuestionText": true, 
+    "showRefusals": false, 
+    "verify": {
+      "frequency": 1, 
+      "start": 1
+    }, 
+    "htmlDialogs": true, 
+    "paradata": {
+      "collection": "all", 
+      "recordCoordinates": false, 
+      "recordInitialPropertyValues": false, 
+      "recordIteratorLoadCases": false, 
+      "recordValues": false, 
+      "deviceStateIntervalMinutes": 5
+    }, 
+    "useHtmlComponentsInsteadOfNativeVersions": false
+  }
+}

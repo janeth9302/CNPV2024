@@ -1,0 +1,35 @@
+{
+  "software": "CSPro", 
+  "version": 8.0, 
+  "fileType": "deployment", 
+  "name": "CENSO2024", 
+  "description": "", 
+  "buildTime": "2024-04-24T16:35:01Z", 
+  "files": [
+    {
+      "path": "Hogares.pen", 
+      "signature": "E8C782AC96BC8422752E0C155CE8A96A"
+    }, 
+    {
+      "path": "Hogares.pff", 
+      "signature": "659C229944C346363620C50FA84181B3"
+    }
+  ], 
+  "dictionaries": [
+    {
+      "path": "..\\Dic\\aldea.dcf"
+    }, 
+    {
+      "path": "..\\Dic\\Hogares.dcf"
+    }, 
+    {
+      "path": "..\\Dic\\muni.dcf"
+    }
+  ], 
+  "deployment": {
+    "type": "LocalFolder", 
+    "cswebUrl": "http://192.168.108.12/csweb/api", 
+    "ftpUrl": "ftp://", 
+    "localFolderPath": ".\\"
+  }
+}

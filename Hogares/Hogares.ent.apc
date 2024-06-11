@@ -1,0 +1,1243 @@
+﻿
+PROC GLOBAL
+
+numeric mesDinamico=1;
+alpha(120) name;
+alpha(200) capi;
+string placeholderMonth = "Mayo";
+string nombre;
+alpha(60) mivar;
+alpha(60) tipoviv;
+valueset VS_MUNIC;
+valueset VS_ALDEA;
+
+PROC H_CH06_VERIFICA
+onfocus
+capi=strip(getlabel($));
+
+
+PROC HOGARES_FF
+
+PROC H_DEPTO
+
+preproc
+
+	if visualvalue($) <> notappl then
+		protect($, true);
+	else
+		protect($, false);
+	endif;
+
+	if H_START_INTERVIEW_TIME = notappl then
+		// Will only be prefilled once
+		H_START_INTERVIEW_TIME = timestamp();
+	endif;
+	
+PROC H_MUN
+
+preproc
+
+VS_MUNIC.clear();
+
+if H_DEPTO in 1:18 then
+
+forcase municipio_dict where depto=H_DEPTO do
+	VS_MUNIC.add(descripcion,municipio_id);
+endfor;
+setvalueset($,VS_MUNIC);
+
+endif;
+PROC H_SEGMENTO
+
+preproc
+
+	if visualvalue($) <> notappl then
+		protect($, true);
+	else
+		protect($, false);
+	endif;
+
+PROC H_ESTRUCTURA
+
+preproc
+
+	if visualvalue($) <> notappl then
+		protect($, true);
+	else
+		protect($, false);
+	endif;
+
+PROC H_VIVIENDA
+
+preproc
+
+	if visualvalue($) <> notappl then
+		protect($, true);
+	else
+		protect($, false);
+	endif;
+
+PROC V_V01_TIPO_VIV
+POSTPROC
+tipoviv=strip(getlabel($,$));
+
+//Si la respuesta es alguna vivieda colectiva, entonces que se termine el nivel
+// para posterior hacer un salto a personas.
+IF $ IN 8:14 THEN
+skip H_CH00_NUM_PER; {ENDLEVEL}
+ENDIF;
+PROC V_V02_PAREDES_VIV
+POSTPROC
+
+mivar=strip(getlabel($,$));
+
+//1. Casa individual
+
+if V_V01_TIPO_VIV in 1,3 and $=8 then
+	errmsg(0001,tipoviv,mivar)
+	select("TIPO DE VIVIENDA",V_V01_TIPO_VIV, "TIPO DE PARED", reenter);
+endif;
+
+
+
+//2. Apartamento y 3. Cuarto o meson
+if V_V01_TIPO_VIV in 2,3 and $ in 2,4,6,9 then
+	errmsg(0001,tipoviv,mivar)
+	select("TIPO DE VIVIENDA",V_V01_TIPO_VIV, "TIPO DE PARED", reenter);
+endif;
+
+//5.Rancho 
+
+if V_V01_TIPO_VIV=4 and $ in 1,3,5 then
+	errmsg(0001,tipoviv,mivar)
+	select("TIPO DE VIVIENDA",V_V01_TIPO_VIV, "TIPO DE PARED", reenter);
+endif;
+
+//6.Casa improvisada 
+
+if V_V01_TIPO_VIV=6 and $ in 1:7 then
+	errmsg(0001,tipoviv,mivar)
+	select("TIPO DE VIVIENDA",V_V01_TIPO_VIV, "TIPO DE PARED", reenter);
+endif;
+
+
+PROC V_V03_TECHO_VIV
+POSTPROC
+
+mivar=strip(getlabel($,$));
+
+//1. Casa individual
+if V_V01_TIPO_VIV=1 and $=7 then
+	errmsg(0002,tipoviv,mivar)
+	select("TIPO DE VIVIENDA",V_V01_TIPO_VIV, "TIPO DE TECHO", reenter);
+endif;
+
+//2. Apartamento y 3. Cuarto o meson
+if V_V01_TIPO_VIV in 2,3 and $ in 6,7 then
+	errmsg(0002,tipoviv,mivar)
+	select("TIPO DE VIVIENDA",V_V01_TIPO_VIV, "TIPO DE TECHO", reenter);
+endif;
+
+//5.Rancho 
+
+if V_V01_TIPO_VIV=4 and $<>6 then
+	errmsg(0002,tipoviv,mivar)
+	select("TIPO DE VIVIENDA",V_V01_TIPO_VIV, "TIPO DE TECHO", reenter);
+endif;
+
+//6.Casa improvisada 
+
+if V_V01_TIPO_VIV=6 and $ in 1:6 then
+	errmsg(0002,tipoviv,mivar)
+	select("TIPO DE VIVIENDA",V_V01_TIPO_VIV, "TIPO DE TECHO", reenter);
+endif;
+PROC V_V04_OCUP_VIV
+POSTPROC
+
+mivar=strip(getlabel($,$));
+
+if $>1 then
+	endlevel;
+endif;
+PROC V_V05_PISO_VIV
+POSTPROC
+
+mivar=strip(getlabel($,$));
+
+//2. Apartamento
+if V_V01_TIPO_VIV=3 and $=2 then
+	errmsg(0003,tipoviv,mivar)
+	select("TIPO DE VIVIENDA",V_V01_TIPO_VIV, "TIPO DE PISO", reenter);
+endif;
+
+//3.Cuarto meson o cuarteria 
+if V_V01_TIPO_VIV=2 and $ in 2,3 then
+	errmsg(0003,tipoviv,mivar)
+	select("TIPO DE VIVIENDA",V_V01_TIPO_VIV, "TIPO DE PISO", reenter);
+endif;
+
+//5.Casa de materetial natural rancho
+// consultar con la Gerencia de Sociales acerca del piso de barro
+if V_V01_TIPO_VIV=4 and $=3 then
+	errmsg(0003,tipoviv,mivar)
+	select("TIPO DE VIVIENDA",V_V01_TIPO_VIV, "TIPO DE PISO", reenter);
+endif;
+
+//6.Casa improvisada
+if V_V01_TIPO_VIV=6 and $ in 1,3:4 then
+	errmsg(0003,tipoviv,mivar)
+	select("TIPO DE VIVIENDA",V_V01_TIPO_VIV, "TIPO DE PISO", reenter);
+endif;
+PROC V_V07_PROV_AGUA
+POSTPROC
+
+mivar=strip(getlabel($,$));
+
+if V_V06_DISPO_AGUA=1 and $ in 5:8 then
+	errmsg(0004,mivar)
+	select("DISPONIBILIDAD DE AGUA", V_V06_DISPO_AGUA, "AGUA PROVENIENTE", reenter);
+endif;
+
+PROC V_V12_PIEZAS_VIV
+POSTPROC
+
+if $>10 then
+	errmsg(0005,$)
+		select("PIEZAS DE LA VIVIENDA", reenter, "Continuar", continue);
+endif;
+
+if $>3 and V_V01_TIPO_VIV=3 then
+	errmsg(0006,$)
+		select("PIEZAS DE LA VIVIENDA", reenter, "Continuar", continue);
+endif;
+PROC V_V13_IDEN_HOGAR
+
+POSTPROC
+
+errmsg(0007)
+select("PRESUPUESTO COMÚN", reenter, "Continuar", V_V14_GRU_HOGAR);
+PROC V_V14_GRU_HOGAR
+PREPROC
+ASK IF V_V13_IDEN_HOGAR>1;
+
+POSTPROC
+
+if $>4 then
+	errmsg(0008,$)
+	select("TOTAL DE HOGARES", reenter, "Continuar", continue);
+endif;
+
+//Fin del modulo
+PROC H_H07_PIEZA_DORMIR
+onfocus
+capi=strip(getlabel($));
+PROC H_H01_COCINA_HOG
+onfocus
+capi=strip(getlabel($));
+postproc
+if ($=2) then
+	skip H_H04_SANIT_HOG;	
+endif;
+
+
+PROC H_H02_USO_COCINA
+onfocus
+capi=strip(getlabel($));
+PROC H_H03_COCINAN_CON
+onfocus
+capi=strip(getlabel($));
+postproc
+// MAS ADELANTE CUANDO ESTEN DEL ID ENTONCES SE HARA LA VALIDACION
+
+{if loadcase(HPHC_VIVIENDA_DICT, H_DEPTO, H_MUN, H_ALDEA, H_CIUDAD, H_BARRIO, H_SEGMENTO, H_MANZANA, H_CENSISTA_ID, H_ESTRUCTURA, H_VIVIENDA) then
+	if($=3 and V_V08_ACC_ALUM) then
+		warning("Previamente se respondió que la vivienda no estaba conectada a la red eléctrica. Verifique respuestas.")
+		select("CONBUSTIBLE PARA COCINAR", reenter, "Continuar", continue);
+	endif;
+endif;}
+	if($=4 and V_V08_ACC_ALUM=3) then
+		warning(0009)
+		select("CONBUSTIBLE PARA COCINAR", reenter, "Continuar", continue);
+	endif;
+PROC H_H04_SANIT_HOG
+onfocus
+capi=strip(getlabel($));
+postproc	
+if ($=8) then
+	skip H_H06_N_REFRI;	
+endif;
+PROC H_H05_SANI_EXCLU
+onfocus
+capi=strip(getlabel($));
+PROC H_H06_N_REFRI
+onfocus
+capi=strip(getlabel($));
+PROC H_H06_O_ESTUFA
+onfocus
+capi=strip(getlabel($));
+PROC H_H06_P_AIRE
+onfocus
+capi=strip(getlabel($));
+PROC H_H06_M_LAVADORA
+onfocus
+capi=strip(getlabel($));
+PROC H_H06_A_RADIO
+onfocus
+capi=strip(getlabel($));
+PROC H_H06_B_TV_1
+onfocus
+capi=strip(getlabel($));
+postproc 
+if $=2 then 
+//skip H_H06_C_PC_1;
+endif;
+PROC H_H06_C_PC_1
+
+PROC H_H06_E_TEL_FIJO
+onfocus
+capi=strip(getlabel($));
+PROC H_H06_F_TEL_CEL_1
+
+PROC H_H06_G_INTERNET
+onfocus
+capi=strip(getlabel($));
+PROC H_H06_H_CABLE
+onfocus
+capi=strip(getlabel($));
+PROC H_H06_I_CARRO_1
+onfocus
+capi=strip(getlabel($));
+postproc
+if $=2 then
+//skip H_H06_J_MOTO_1;
+endif;
+PROC H_H06_J_MOTO_1
+onfocus
+capi=strip(getlabel($));
+postproc
+if $=2 then 
+//skip H_H06_K_BICI_1;
+endif;
+PROC H_H06_K_LANCHA_1
+onfocus
+capi=strip(getlabel($));
+postproc
+if $=2 then 
+//skip H_H06_M_LAVADORA;
+endif;
+PROC H_E01_TIEMPO
+onfocus
+capi=strip(getlabel($));
+
+postproc
+if $=2 then 
+	skip H_E06_REME_ANIO;
+endif;
+PROC H_E01_NUM_EMI
+onfocus
+capi=strip(getlabel($));
+postproc 
+{if($=0) then
+	skip COMPOSICION_FORM;}
+if ($>3) then
+	errmsg(0010,$)
+	select("NÚMERO DE EMIGRANTES", reenter, "Continuar", continue);
+endif;
+
+PROC H_E02_SEXO_EMI
+onfocus
+capi=strip(getlabel($));
+ORDEN_E=CUROCC(EMIGRACION000);
+
+PROC H_E03_EDAD_EMI
+onfocus
+capi=strip(getlabel($));
+postproc
+if($>45) then
+	errmsg(0011,$)
+	select("EDAD DEL EMIGRANTE", reenter, "Continuar", continue);
+endif;
+PROC H_E04_ANIO_EMI
+onfocus
+capi=strip(getlabel($));
+PROC H_E05_RESI_EMI
+onfocus
+capi=strip(getlabel($));
+
+PROC ADD_ANOTHER_EMIGRACION
+
+preproc
+
+savepartial();
+
+onfocus
+capi=strip(getlabel($));
+
+
+postproc
+IF $=2 THEN 
+	IF CUROCC(EMIGRACION000)<H_E01_NUM_EMI THEN
+		ERRMSG(0012,H_E01_NUM_EMI);
+		REENTER;
+	ELSE
+		ENDGROUP;
+	ENDIF;
+ELSE
+	IF CUROCC(EMIGRACION000)>H_E01_NUM_EMI-1 THEN	
+		ENDGROUP;
+	ELSE	
+		SKIP NEXT ORDEN_E {NEXT H_E02_SEXO_EMI};
+	ENDGROUP;
+	ENDIF;
+ENDIF;
+
+PROC H_E06_REME_ANIO
+onfocus
+capi=strip(getlabel($));
+
+
+postproc
+if H_E01_TIEMPO=2 and $>=1 then 
+skip COMPOSICION_FORM; 
+endif;
+PROC H_E07_NO_DEST
+onfocus
+capi=strip(getlabel($));
+
+PROC H_M01_TOTAL_MUERT
+postproc
+if $=2 then
+endgroup;
+endif;
+PROC H_M01_CUANTAS
+onfocus
+capi=strip(getlabel($));
+postproc
+if $ in 98:99 then 	
+	endgroup;
+endif;
+
+if $ in 4:10 then
+	warning(0013)
+	select("Corregir",H_M01_CUANTAS,"Continuar", continue);
+endif;
+PROC H_M02_MORT_NOMBRE
+onfocus
+capi=strip(getlabel($));
+ORDEN_M=CUROCC(MORTALIDAD000);
+Postproc
+
+If $="" then
+	warning(0014)
+	select("Corregir",H_M02_MORT_NOMBRE,"Continuar", continue);
+endif;
+PROC H_M03_MORT_SEXO
+onfocus
+capi=strip(getlabel($));
+PROC H_M04_MORT_EDAD
+onfocus
+capi=strip(getlabel($));
+PROC H_MM01_MORT_CAUSA
+preproc
+capi=strip(getlabel($));
+
+Postproc
+
+
+PROC H_MM02_MORT_EMB
+preproc
+ask if H_M03_MORT_SEXO = 2 and H_M04_MORT_EDAD in 12:49;
+onfocus
+capi=strip(getlabel($));
+postproc
+
+
+PROC H_MM03_MORT_EMB
+preproc
+ask if H_MM02_MORT_EMB=1;
+PROC H_ADD_ANOTHER_MORTALIDAD
+preproc
+capi=strip(getlabel($));
+savepartial();
+
+onfocus
+
+
+postproc
+
+IF $=2 THEN 
+	IF CUROCC(MORTALIDAD000)<H_M01_CUANTAS THEN
+		ERRMSG(0012,H_E01_NUM_EMI);
+		REENTER;
+	ELSE
+		ENDGROUP;
+	ENDIF;
+ELSE
+	IF CUROCC(MORTALIDAD000)>H_M01_CUANTAS-1 THEN	
+		ENDGROUP;
+	ELSE	
+		SKIP NEXT H_M02_MORT_NOMBRE;
+	ENDGROUP;
+	ENDIF;
+ENDIF;
+PROC H_CH00_NUM_PER
+onfocus
+capi=strip(getlabel($));
+postproc
+
+if H_CH00_NUM_PER>20 then
+	warning(0016,H_CH00_NUM_PER);
+endif;
+
+ if $<>0 then 
+	skip H_CH01_NOMBRE(1);
+ endif;
+PROC H_CH000_NPER
+
+
+PROC H_CH01_NOMBRE
+preproc
+name=strip(getlabel($));
+capi=strip(getlabel($));
+onfocus
+H_CH000_NPER=CUROCC(COMPOSICION_ROSTER);
+postproc
+//No se puede dejar en blanco 
+if H_CH01_NOMBRE="" then 
+	errmsg(0017);
+reenter;
+endif;
+
+if not regexmatch(H_CH01_NOMBRE, "^[A-Za-zÑñÁÉÍÓÚáéíóú0-9 ]+$") then
+    // ...
+	errmsg(0018);
+	reenter;
+endif;
+
+
+PROC H_CH05_PARENTESCO
+preproc
+//Parentesco=1 aparece seleccionado 
+H_CH05_PARENTESCO(1)=1;
+onfocus
+capi=strip(getlabel($));
+postproc
+//Verifica que la persona 1 sea la Jefa, jefe o persona de referencia
+If $<>1 and CUROCC()=1  Then
+	Errmsg(0019);
+	reenter;
+Endif;
+
+If $=1 and CUROCC()<>1  Then
+	Errmsg(0019);
+	reenter;
+Endif;
+
+{
+//Edad del hijo no sea mayor a la Jefa o jefe o persona de referencia
+If $=3 and (H_CH02_EDAD(1)-H_CH02_EDAD<12)   Then
+	Errmsg("Indico que la edad del hijo (%D) es, mayor de 12 años con respecto a la edad de la Jefa o jefe, es correcto?",H_CH02_EDAD) ;
+	reenter;	
+Endif;
+
+//Edad de la nuera o yerno no sea correcto el parentesco con la Jefa o jefe o persona de referencia
+if $=5 and H_CH02_EDAD<12 then 
+	errmsg("Indicó que con edad (%d) es nuera o yerno, asegurese de que la edad y relación de parentesco esta correcta.",H_CH02_EDAD);
+	endif;
+
+
+If $=6 and (H_CH02_EDAD(1)-H_CH02_EDAD<12)   Then
+	Errmsg("Indicó que la edad del Nieto es (%d) recuerde que debe ser menos de 24 años menor que la persona de referencia. Asegures de que la edad y relación de parentesco sea la correcta.",H_CH02_EDAD) ;
+	reenter;	
+Endif;
+
+
+If $=7 and (H_CH02_EDAD-H_CH02_EDAD(1)<12)  Then
+	Errmsg("Indicó que la edad de los padres (%d) recuerde que debe ser menos de 12 años mayor que la persona de referencia. Asegurese que la edad y la relación de parentesco sea la correcta.",H_CH02_EDAD) ;
+	reenter;	
+Endif;
+
+If $=8 and (H_CH02_EDAD-H_CH02_EDAD(1)<12)  Then
+	Errmsg("Indicó que la edad de los suegros es (%d), recuerde que debe ser mayor de 24 años.",H_CH02_EDAD) ;
+	reenter;	
+Endif;
+}
+
+
+
+
+PROC H_CH04_SEXO
+onfocus
+capi=strip(getlabel($));
+PROC H_CH02_EDAD
+preproc
+//El código de verificación exhaustiva verifica la edad de la Jefa, jefe o persona de referencia
+//chequeo duro
+onfocus
+//name=strip(getlabel($));
+capi=strip(getlabel($));
+nombre=H_CH01_NOMBRE(CUROCC(COMPOSICION_ROSTER));
+postproc
+if curocc()=1 and $(1)<12 then 
+	errmsg(0020);
+		reenter;
+endif;
+
+//Verificación exhaustiva verifica la edad de la Jefa, jefe o persona de referencia
+//Rango de !2:18
+if curocc()=1 and $(1) in 12:18 then 
+	warning(0021)
+		select("Continuar", continue, "Volver a Entrar", reenter);
+endif;
+
+// H_CH00_NUM_PER(1)=1
+//Edad del hijo no sea mayor a la Jefa o jefe o persona de referencia
+If H_CH05_PARENTESCO=3 and ($(1)-$<12)   Then
+	Errmsg(0022,$) ;
+	reenter;	
+Endif;
+
+//Edad de la nuera o yerno no sea correcto el parentesco con la Jefa o jefe o persona de referencia
+if H_CH05_PARENTESCO=5 and $<12 then 
+	errmsg(0023,$);
+	endif;
+
+
+If H_CH05_PARENTESCO=6 and ($(1)-$<12)   Then
+	Errmsg(0024,$) ;
+	reenter;	
+Endif;
+
+
+If H_CH05_PARENTESCO=7 and (H_CH02_EDAD-H_CH02_EDAD(1)<12)  Then
+	Errmsg(0025,$) ;
+	reenter;	
+Endif;
+
+If H_CH05_PARENTESCO=8 and (H_CH02_EDAD-H_CH02_EDAD(1)<12)  Then
+	Errmsg(0026,$) ;
+	reenter;	
+Endif;
+
+If H_CH05_PARENTESCO=2 and $<12 Then
+	Errmsg(0027,$) ;
+	reenter;	
+Endif;
+PROC H_CH03A_ANIO
+onfocus
+capi=strip(getlabel($));
+ //Verifica que el año coincida con la edad que indica
+postproc
+	numeric VerificaEdad=(2024-H_CH03A_ANIO);
+//9999 si no sabe el año 	
+ if $=9999 then 
+	skip H_ADD_ANOTHER_PERSONA;
+endif;
+
+
+if VerificaEdad<>H_CH02_EDAD then 
+	warning(0028,H_CH03A_ANIO,H_CH02_EDAD)
+	select("Continuar", continue, "Volver a Entrar", reenter );
+endif;
+	
+		
+		
+
+PROC H_CH03B_MES
+preproc
+onfocus
+capi=strip(getlabel($));
+postproc
+//99 si no sabe el mes 
+  if $=99 then 
+	skip H_ADD_ANOTHER_PERSONA;
+endif;
+PROC H_CH03C_DIA
+onfocus
+capi=strip(getlabel($));
+PROC H_ADD_ANOTHER_PERSONA
+preproc
+capi=strip(getlabel($));
+onfocus
+
+postproc
+
+IF $=2 THEN 
+	IF CUROCC(COMPOSICION_ROSTER)<H_CH00_NUM_PER THEN
+		ERRMSG(0012,H_CH00_NUM_PER);
+		REENTER;
+	ELSE
+		ENDGROUP;
+	ENDIF;
+ELSE
+	IF CUROCC(COMPOSICION_ROSTER)>H_CH00_NUM_PER-1 THEN	
+		ENDGROUP;
+	ELSE	
+		SKIP NEXT H_CH01_NOMBRE;
+	ENDGROUP;
+	ENDIF;
+ENDIF;
+PROC H_P03_PUEBLO
+onfocus
+capi=strip(getlabel($));
+postproc
+{if $ in 9:10 then 
+	skip to H_P06A_VER;
+endif;}
+if $=12 then 
+	skip H_P03_ESPECIFIQUE;
+endif;
+PROC H_P03_ESPECIFIQUE
+preproc
+ask if H_P03_PUEBLO=12;
+onfocus
+capi=strip(getlabel($));
+
+POSTPROC
+If $="" then 
+	ERRMSG(0017);
+		reenter;
+ENDIF; 
+PROC H_P04_LENGUAMAT
+onfocus
+capi=strip(getlabel($));
+
+
+postproc
+if $=7 then 
+skip to H_P06A_VER;
+endif;
+PROC H_P05A_MATERNA
+preproc
+ask if H_CH02_EDAD>2;
+capi=strip(getlabel($));
+PROC H_P05B_ESPANOL
+preproc
+//Se cambio la edad>2
+ask if H_CH02_EDAD>2 {and H_P01_AFRODES in 2:5 or H_P02_INDIGENA=1} ;
+capi=strip(getlabel($));
+PROC H_P06A_VER
+onfocus
+capi=strip(getlabel($));
+postproc
+if $ in 1,5 then 
+skip to H_P07A_OIR;
+endif;
+PROC H_P06B_VER_C
+onfocus
+capi=strip(getlabel($));
+PROC H_P07A_OIR
+onfocus
+capi=strip(getlabel($));
+postproc
+if $ in 1,5 then 
+	skip to H_P08A_CAMINAR;
+endif;
+PROC H_P07B_OIR_C
+onfocus
+capi=strip(getlabel($));
+PROC H_P08A_CAMINAR
+onfocus
+capi=strip(getlabel($));
+postproc
+if $ in 1,5 then 
+	skip to H_P09A_RECORDAR;
+endif;
+PROC H_P08D_CAMINAR_E
+onfocus
+capi=strip(getlabel($));
+PROC H_P09A_RECORDAR
+onfocus
+capi=strip(getlabel($));
+postproc
+if $ in 1,5 then 
+	skip to H_P10A_VALERSE;
+endif;
+PROC H_P09B_RECORDAR_C
+onfocus
+capi=strip(getlabel($));
+PROC H_P10A_VALERSE
+onfocus
+capi=strip(getlabel($));
+postproc
+if $ in 1,5 then 
+	skip to H_P11A_COMUNI;
+endif;
+PROC H_P10B_VALERSE_C
+onfocus
+capi=strip(getlabel($));
+PROC H_P11A_COMUNI
+onfocus
+capi=strip(getlabel($));
+postproc
+if $ in 1,5 then 
+	skip to H_P14A_LUGAR_NA;
+endif;
+PROC H_P11B_COMUNI_C
+onfocus
+capi=strip(getlabel($));
+PROC H_P14A_LUGAR_NA
+onfocus
+capi=strip(getlabel($));
+postproc 
+if $=1 then 
+	skip to H_P16A_MUNI_SIEMP;
+	elseif $=3 then 
+	skip to H_P14C_NA_PAIS;
+endif;
+
+PROC H_P14B_NA_OTR_MU
+onfocus
+capi=strip(getlabel($));
+PROC H_P14C_NA_PAIS
+preproc
+ask if H_P14A_LUGAR_NA=3;
+capi=strip(getlabel($));
+PROC H_P15A_LLEGA_ANIO
+preproc
+capi=strip(getlabel($));
+ask if H_P14A_LUGAR_NA=3;
+postproc 
+if $>H_CH03A_ANIO then 
+	warning(0015,$,H_CH03A_ANIO)
+	select("Continuar", continue, "Volver a Entrar", reenter);
+endif;
+PROC H_P16A_MUNI_SIEMP
+onfocus
+capi=strip(getlabel($));
+postproc
+
+if $=1 then 
+	skip H_P19_INSCRI_RNP;
+elseif $=3 then 
+	skip to H_P16C_VIVIA_PAIS;
+endif;
+
+
+PROC H_P16B_MUNI_VIVIA
+preproc
+ask if H_P16A_MUNI_SIEMP=2;
+capi=strip(getlabel($));
+VS_MUNIC.clear();
+
+if H_DEPTO in 1:18 then
+
+forcase municipio_dict where depto=H_DEPTO do
+	VS_MUNIC.add(descripcion,municipio_id);
+endfor;
+setvalueset($,VS_MUNIC);
+
+endif;
+PROC H_P16C_VIVIA_PAIS
+ 
+preproc
+ask if H_P16A_MUNI_SIEMP=3;
+capi=strip(getlabel($));
+PROC H_P17_MUNIC_ANIO
+preproc 
+ask if H_P16A_MUNI_SIEMP in 2:3;
+capi=strip(getlabel($));
+PROC H_P18_RAZON_VINO
+preproc 
+ask if H_P16A_MUNI_SIEMP in 2:3;
+capi=strip(getlabel($));
+PROC H_P19_INSCRI_RNP
+onfocus
+capi=strip(getlabel($));
+PROC H_P20_ESTA_CIVIL
+preproc
+ask if H_CH02_EDAD>10;
+capi=strip(getlabel($));
+postproc
+If H_CH05_PARENTESCO=2 and $<>$(1) Then
+	warning(0029)
+	select("Continuar", continue, "Volver a Entrar", reenter);
+Endif;
+PROC H_P22_ASISTEN_EDU
+preproc
+ask if H_CH02_EDAD>=3;
+capi=strip(getlabel($));
+
+postproc
+if $ in 2:3 then 
+	skip H_P26_A_PC;
+endif;
+
+PROC H_P23A_NIVEL_EDUC
+preproc
+capi=strip(getlabel($));
+ask if H_CH02_EDAD>=3;
+
+PROC H_P23B_GRADO_EDUC
+preproc
+ask if H_CH02_EDAD>=3;
+capi=strip(getlabel($));
+POSTPROC
+numeric x =0;
+
+
+IF H_P23A_NIVEL_EDUC=3 AND $ IN 1:3 THEN x=1 ENDIF;
+IF H_P23A_NIVEL_EDUC=4 AND $ IN 1:9 THEN x=1 ENDIF;
+IF H_P23A_NIVEL_EDUC=5 AND $ IN 1:3 THEN x=1 ENDIF;
+IF H_P23A_NIVEL_EDUC=6 AND $ IN 1:2 THEN x=1 ENDIF;
+IF H_P23A_NIVEL_EDUC=7 AND $ IN 1:4 THEN x=1 ENDIF;
+IF H_P23A_NIVEL_EDUC=8 AND $ IN 1:8 THEN x=1 ENDIF;
+IF H_P23A_NIVEL_EDUC=9 AND $ IN 1:3 THEN x=1 ENDIF;
+IF H_P23A_NIVEL_EDUC=10 AND $ IN 1:2 THEN x=1 ENDIF;
+IF H_P23A_NIVEL_EDUC=11 AND $ IN 1:4 THEN x=1 ENDIF;
+IF x=0 THEN 
+	ERRMSG (0030)
+	select("Go to H_P23A_NIVEL_EDUC", H_P23A_NIVEL_EDUC,"Go To H_P23B_GRADO_EDUC", H_P23B_GRADO_EDUC);
+ENDIF;
+
+
+
+
+if H_P23A_NIVEL_EDUC in 1:4,99 and H_CH02_EDAD>=5 and $>0 then 
+	skip H_P26_A_PC;
+endif;
+
+
+PROC H_P25_ULTI_CARR
+
+preproc
+//ask if H_P23A_NIVEL_EDUC in 5:11 ;
+capi=strip(getlabel($));
+POSTPROC
+If $="" then 
+	ERRMSG(0017);
+	REENTER;
+ENDIF; 
+PROC H_P24_FIN_CARR
+
+//Chequeo blando: "Contestó que finalizó carrera y en GRADO_NIVEL < 5, verifique"
+
+preproc
+ask if H_P23A_NIVEL_EDUC in 5:11 ;
+capi=strip(getlabel($));
+
+POSTPROC
+IF H_P23A_NIVEL_EDUC<5 and H_P24_FIN_CARR=1 THEN 
+	ERRMSG (0031)
+		select("Go to Nivel educativo", H_P23A_NIVEL_EDUC,"Go To Finalizo Carrera", H_P24_FIN_CARR);
+ENDIF;
+PROC H_P21_LEER_ESCRI
+preproc
+ask if H_CH02_EDAD>=5;
+capi=strip(getlabel($));
+PROC H_P26_A_PC
+
+preproc
+ask if H_CH02_EDAD>=3;
+capi=strip(getlabel($));
+POSTPROC
+If $=notappl then 
+ERRMSG(0017);
+ENDIF; 
+PROC H_P26_B_USO_TABLE
+preproc
+ask if H_CH02_EDAD>=3;
+
+POSTPROC
+If $=notappl then 
+ERRMSG(0017);
+ENDIF; 
+PROC H_P26_C_USO_CEL
+
+preproc
+ask if H_CH02_EDAD>=3;
+
+POSTPROC
+If $=notappl then 
+ERRMSG(0017);
+ENDIF; 
+PROC H_P26_D_USO_INTER
+preproc
+ask if H_CH02_EDAD>=3;
+
+POSTPROC
+If $=notappl then 
+ERRMSG(0017);
+ENDIF; 
+PROC H_P27_SEM_PAS_TRA
+
+preproc
+ask if H_CH02_EDAD>=5;
+capi=strip(getlabel($));
+POSTPROC
+IF H_P27_SEM_PAS_TRA in 2:3 then
+H_P28_AUTOCONSUMO=NOTAPPL;
+H_P29_ACTI_REALI=notappl;
+H_P30_BUSC_TRAB=notappl;
+H_P31_DISPONIBI=notappl;
+SKIP  H_P33_OCUPACION; 
+ENDIF;
+
+if $=5 then 
+   skip H_P29_ACTI_REALI;
+endif;   
+PROC H_P28_AUTOCONSUMO
+preproc
+ask if H_CH02_EDAD>=5;
+capi=strip(getlabel($));
+
+postproc
+if $ in 1,2 then
+  skip H_P33_OCUPACION;
+endif;  
+PROC H_P29_ACTI_REALI
+
+preproc
+ask if  H_CH02_EDAD>=5;
+capi=strip(getlabel($));
+
+postproc
+if $ in 1,3 then
+  skip H_P33_OCUPACION;
+endif;  
+PROC H_P30_BUSC_TRAB
+//Todas las personas mayores o iguales de 5 años que no estuvieron empleadas en la semana de referencia (SEMANA_PASADA_TRABAJO (P29=5) o 
+//ACTIVIDADES_REALIZADAS (P31=4,5))
+
+preproc
+ask if H_CH02_EDAD>=5;
+capi=strip(getlabel($));
+PROC H_P31_DISPONIBI
+preproc
+ask if H_CH02_EDAD>=5;
+capi=strip(getlabel($));
+PROC H_P32_ACT_PRINC
+preproc
+ask if H_CH02_EDAD>=5;
+capi=strip(getlabel($));
+
+postproc
+
+
+
+if H_P32_ACT_PRINC=8 and H_P22_ASISTEN_EDU =2 then
+	ERRMSG(0032, H_P22_ASISTEN_EDU);
+endif;
+
+
+if H_P32_ACT_PRINC=6 and  H_CH02_EDAD <50 then
+	ERRMSG(0033, H_CH02_EDAD);
+endif;
+
+
+if H_P32_ACT_PRINC=3 and H_P22_ASISTEN_EDU=1 THEN
+	ERRMSG(0034);
+endif;
+
+PROC H_P33_OCUPACION
+onfocus
+capi=strip(getlabel($));
+POSTPROC
+IF LENGTH(STRIP($)) < 5 THEN 
+	ERRMSG(0035);
+	REENTER;
+ENDIF;
+PROC H_P34_INDUSTRIA
+onfocus
+capi=strip(getlabel($));
+POSTPROC
+PROC H_P35_LUGAR_TRAB
+preproc
+ask if H_CH02_EDAD>=5;
+capi=strip(getlabel($));
+
+
+
+
+PROC H_P36_MUNI_TRAB
+preproc
+ask if H_CH02_EDAD>=5;
+capi=strip(getlabel($));
+postproc 
+if $=1 then 
+	skip H_P39_TRABAJ_COMO;
+elseif $=3 then 
+	skip H_P38_OT_PAI_TRAB;
+endif;
+	
+ 
+PROC H_P37_OT_MUN_TRAB
+preproc
+ask if H_CH02_EDAD>=5 and H_P36_MUNI_TRAB=2;
+capi=strip(getlabel($));
+
+
+VS_MUNIC.clear();
+if H_DEPTO in 1:18 then
+
+forcase municipio_dict where depto=H_DEPTO do
+	VS_MUNIC.add(descripcion,municipio_id);
+endfor;
+setvalueset($,VS_MUNIC);
+
+endif;
+
+postproc
+
+PROC H_P38_OT_PAI_TRAB
+preproc
+ask if H_CH02_EDAD>=5 and H_P36_MUNI_TRAB=3;
+capi=strip(getlabel($));
+PROC H_P39_TRABAJ_COMO
+preproc
+ask if H_CH02_EDAD>=5;
+capi=strip(getlabel($));
+PROC H_P40_ACTI_AGRO
+preproc
+ask if H_CH02_EDAD>=5;
+capi=strip(getlabel($));
+
+POSTPROC
+
+PROC H_F01_HIJAS
+//Numero de hijas
+preproc
+ask if H_CH02_EDAD>=10 and H_CH04_SEXO=2;
+capi=strip(getlabel($));
+
+
+postproc
+If H_CH02_EDAD=15  and H_F01_HIJAS>3   Then
+	ERRMSG (0036)
+select("Edad de la Madre", H_CH02_EDAD, "Cantidad de hijas", H_F01_HIJAS);
+reenter;	
+Endif;
+
+
+if $=99 then 
+H_F02_HIJAS_VIVAS=99;
+H_F03_HIJAS_MUERT=99;
+ skip to H_F04_HIJOS;
+	elseif $=0 then
+	skip to H_F04_HIJOS;
+ENDIF;
+PROC H_F02_HIJAS_VIVAS
+//Numero de hijas vivas 
+preproc
+ask if H_CH02_EDAD>=10 and H_CH04_SEXO=2 AND H_F01_HIJAS>0;
+capi=strip(getlabel($));
+postproc
+if H_F02_HIJAS_VIVAS>H_F01_HIJAS then    
+ERRMSG (0037)
+select("Cantidad de Hijas nacidas ha tenido", H_F01_HIJAS, "Cantidad de Hijas vivas reportadasS", H_F02_HIJAS_VIVAS);
+Endif;
+
+
+PROC H_F03_HIJAS_MUERT
+//Numero de hijas muertas
+preproc
+ask if H_CH02_EDAD>=10 and H_CH04_SEXO=2 AND H_F01_HIJAS>0;
+capi=strip(getlabel($));
+
+postproc
+
+PROC H_F04_HIJOS
+//Numero de hijos 
+preproc
+ask if H_CH02_EDAD>=10 and H_CH04_SEXO=2;
+capi=strip(getlabel($));
+
+numeric y,tot_hijos =0;
+if H_F01_HIJAS<>99 or H_F04_HIJOS<>99 then
+tot_hijos=H_F01_HIJAS + H_F04_HIJOS;
+endif;
+
+postproc
+
+IF H_F01_HIJAS IN 1:20 AND $=99 THEN
+	H_F05_HIJOS_VIVOS=99;
+	H_F06_HIJOS_MUERT=99;
+	skip to H_F07_ANIO_NAC
+	ENDIF;
+	
+if $=0 then
+	skip to H_F07_ANIO_NAC;
+ENDIF;
+
+
+
+IF H_CH02_EDAD in 12,13,14 AND tot_hijos>1 then y=1 ENDIF;
+IF H_CH02_EDAD in 15,16,17  AND tot_hijos > 2 tHEN y=1 ENDIF;
+IF H_CH02_EDAD in 18,19,20,21 AND tot_hijos > 3 THEN y=1 ENDIF;
+IF H_CH02_EDAD in 22,23 AND tot_hijos>4  THEN y=1 ENDIF;
+IF H_CH02_EDAD in 24,25 AND tot_hijos>5  THEN y=1 ENDIF;
+IF H_CH02_EDAD in 26,27 AND tot_hijos>6  THEN y=1 ENDIF;
+IF H_CH02_EDAD in 28,29 and tot_hijos>7 THEN y=1 ENDIF;
+IF H_CH02_EDAD in 30,31 AND tot_hijos>8 THEN y=1 ENDIF;
+IF H_CH02_EDAD in 32:49 AND tot_hijos>9  THEN y=1 ENDIF;
+IF y=1 THEN 
+	warning (0038,tot_hijos)
+		select("Edad de la madre",  H_CH02_EDAD,"Cantidad de hijas", H_F01_HIJAS,"Cantidad de Hijos",H_F04_HIJOS,"Continuar",continue)
+ENDIF;
+
+
+PROC H_F05_HIJOS_VIVOS
+preproc
+ask if H_CH02_EDAD>=10 and H_CH04_SEXO=2 and H_F04_HIJOS>0;
+capi=strip(getlabel($));
+postproc
+if H_F05_HIJOS_VIVOS>H_F04_HIJOS then    
+ERRMSG (0039)
+select("Go to Cuántos hijos nacidos ha tenido", H_F04_HIJOS, "Go To Hijos vivos reportados", H_F05_HIJOS_VIVOS);
+Endif;
+PROC H_F06_HIJOS_MUERT
+preproc
+ask if H_CH02_EDAD>=10 and H_CH04_SEXO=2 and H_F04_HIJOS>0 ;
+capi=strip(getlabel($));
+
+postproc
+
+PROC H_F07_ANIO_NAC
+preproc
+ask if H_CH02_EDAD>=10 and H_CH04_SEXO=2 AND (H_F01_HIJAS IN 1:20 or  H_F04_HIJOS IN 1:20);
+
+PROC H_F07_MES_NAC
+preproc
+ask if H_CH02_EDAD>=10 and H_CH04_SEXO=2 AND (H_F01_HIJAS IN 1:20 or  H_F04_HIJOS IN 1:20);
+PROC H_F08_SEXO_ULTIMO
+preproc
+ask if H_CH02_EDAD>=10 and H_CH04_SEXO=2 AND (H_F01_HIJAS IN 1:20 or  H_F04_HIJOS IN 1:20);
+capi=strip(getlabel($));
+PROC H_F09_VIVO_ULTIMO
+preproc
+ask if H_CH02_EDAD>=10 and H_CH04_SEXO=2 AND (H_F01_HIJAS IN 1:20 or  H_F04_HIJOS IN 1:20);
+capi=strip(getlabel($));
+
+
+PROC H_F10_EDAD_EMB
+preproc
+ask if H_CH02_EDAD>=10 and H_CH04_SEXO=2 AND (H_F01_HIJAS IN 1:20 or  H_F04_HIJOS IN 1:20);
+capi=strip(getlabel($));
+PROC H_CONCLUIR_ENTREVISTA
+
+preproc
+
+	// Clear out response so that interviewer always have to manually accept the case
+	H_CONCLUIR_ENTREVISTA = notappl;
+
+postproc
+
+	if H_CONCLUIR_ENTREVISTA = 1 then
+		// The program will close after this field
+		H_END_INTERVIEW_TIME = timestamp();
+	elseif H_CONCLUIR_ENTREVISTA = 2 then
+		// Allows review of hogares section
+		reenter HOGARES_FORM;
+	elseif H_CONCLUIR_ENTREVISTA = 3 then
+		// Allows review of emogracion section
+		reenter EMIGRACION_FORM;
+	elseif H_CONCLUIR_ENTREVISTA = 4 then
+		// Allows review of composicion section
+		reenter COMPOSICION_FORM;
+	elseif H_CONCLUIR_ENTREVISTA = 5 then
+		// Allows review of personas section
+		reenter PERSONAS_FORM;
+	elseif H_CONCLUIR_ENTREVISTA = 6 then
+		// Allows review of mortalidad section
+		reenter MORTALIDAD_FORM;
+	endif;

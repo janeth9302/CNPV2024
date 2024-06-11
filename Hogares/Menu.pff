@@ -1,0 +1,11 @@
+﻿[Run Information]
+Version=CSPro 8.0
+AppType=Entry
+
+[Files]
+Application=.\Menu.ent
+InputData=|type=None
+Paradata=.\Menu.cslog
+
+[ExternalFiles]
+HPHC_HOGARES_DICT=..\Dat\Hogares.csdb
