@@ -1,0 +1,43 @@
+﻿[Dictionary]
+Version=CSPro 7.7
+Label=aldea
+Name=ALDEA_DICT
+RecordTypeStart=1
+RecordTypeLen=1
+Positions=Relative
+ZeroFill=No
+DecimalChar=Yes
+SecurityOptions=4FB0D52E9D0D3DB2B7634C0D6ED5175633915E59C802F2EB30119B18582A5897
+
+[Level]
+Label=aldea questionnaire
+Name=ALDEA_QUEST
+
+[IdItems]
+
+[Item]
+Label=Aldea
+Name=ALDEA_ID
+Start=2
+Len=6
+DataType=Numeric
+
+[Record]
+Label=aldea record
+Name=ALDEA_REC
+RecordTypeValue='1'
+RecordLen=61
+
+[Item]
+Label=Descripcion
+Name=DESCRIP_ALDEA
+Start=8
+Len=50
+DataType=Alpha
+
+[Item]
+Label=Municipio
+Name=MUNICIPIO
+Start=58
+Len=4
+DataType=Numeric

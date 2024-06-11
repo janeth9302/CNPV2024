@@ -1,0 +1,43 @@
+﻿[Dictionary]
+Version=CSPro 7.7
+Label=municipio
+Name=MUNICIPIO_DICT
+RecordTypeStart=1
+RecordTypeLen=1
+Positions=Relative
+ZeroFill=No
+DecimalChar=Yes
+SecurityOptions=C45818277FE278CF4544A91280124842EFBF4B1071431DE0D67F1EFC0A8B899D
+
+[Level]
+Label=municipio questionnaire
+Name=MUNICIPIO_QUEST
+
+[IdItems]
+
+[Item]
+Label=municipio identification
+Name=MUNICIPIO_ID
+Start=2
+Len=4
+DataType=Numeric
+
+[Record]
+Label=municipio record
+Name=MUNICIPIO_REC
+RecordTypeValue='1'
+RecordLen=31
+
+[Item]
+Label=Descripcion
+Name=DESCRIPCION
+Start=6
+Len=24
+DataType=Alpha
+
+[Item]
+Label=Departamento
+Name=DEPTO
+Start=30
+Len=2
+DataType=Numeric

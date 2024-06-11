@@ -1,0 +1,43 @@
+﻿[Dictionary]
+Version=CSPro 7.7
+Label=lugares
+Name=LUGARES_DICT
+RecordTypeStart=1
+RecordTypeLen=1
+Positions=Relative
+ZeroFill=No
+DecimalChar=Yes
+SecurityOptions=2312E2DE291F35915DFF2A680EB54254C98C53EA07E695182E5B0392B4D4A47F
+
+[Level]
+Label=lugares Level
+Name=LUGARES_LEVEL
+
+[IdItems]
+
+[Item]
+Label=idlugar
+Name=IDLUGAR
+Start=2
+Len=12
+DataType=Alpha
+
+[Record]
+Label=lugares Record
+Name=LUGARES_REC
+RecordTypeValue='1'
+RecordLen=150
+
+[Item]
+Label=codaldea
+Name=CODALDEA
+Start=14
+Len=6
+DataType=Numeric
+
+[Item]
+Label=colonias
+Name=COLONIAS
+Start=20
+Len=131
+DataType=Alpha

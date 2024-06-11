@@ -1,0 +1,4941 @@
+{
+  "software": "CSPro", 
+  "version": 8.0, 
+  "fileType": "dictionary", 
+  "name": "HPHC_HOGARES_DICT", 
+  "labels": [ { "text": "HND Censo Hogares Diccionario" } ], 
+  "security": {
+    "allowDataViewerModifications": true, 
+    "allowExport": true, 
+    "cachedPasswordMinutes": 0, 
+    "settings": "20c225c0fb7e1815f53470005990321cd8f0bfb80b5887f186a790f276ed9112"
+  }, 
+  "readOptimization": true, 
+  "recordType": {
+    "start": 1, 
+    "length": 1
+  }, 
+  "defaults": {
+    "decimalMark": true, 
+    "zeroFill": true
+  }, 
+  "relativePositions": true, 
+  "levels": [
+    {
+      "name": "HOGARES_LEVEL", 
+      "labels": [ { "text": "Hogares Level" } ], 
+      "ids": {
+        "items": [
+          {
+            "name": "H_DEPTO", 
+            "labels": [ { "text": "Departamento" } ], 
+            "contentType": "numeric", 
+            "start": 2, 
+            "length": 2, 
+            "zeroFill": true, 
+            "valueSets": [
+              {
+                "name": "H_DEPTO_VS1", 
+                "labels": [ { "text": "Departamento" } ], 
+                "values": [
+                  {
+                    "labels": [ { "text": "Atlántida" } ], 
+                    "pairs": [ { "value": "1" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Colon" } ], 
+                    "pairs": [ { "value": "2" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Comayagua" } ], 
+                    "pairs": [ { "value": "3" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Copan" } ], 
+                    "pairs": [ { "value": "4" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Cortes" } ], 
+                    "pairs": [ { "value": "5" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Choluteca" } ], 
+                    "pairs": [ { "value": "6" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "El Paraíso" } ], 
+                    "pairs": [ { "value": "7" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Francisco Morazán" } ], 
+                    "pairs": [ { "value": "8" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Gracias A Dios" } ], 
+                    "pairs": [ { "value": "9" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Intubuca" } ], 
+                    "pairs": [ { "value": "10" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Islas De La Bahía" } ], 
+                    "pairs": [ { "value": "11" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "La Paz" } ], 
+                    "pairs": [ { "value": "12" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Lempira" } ], 
+                    "pairs": [ { "value": "13" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Ocotepeque" } ], 
+                    "pairs": [ { "value": "14" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Olancho" } ], 
+                    "pairs": [ { "value": "15" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Santa Bárbara" } ], 
+                    "pairs": [ { "value": "16" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Valle" } ], 
+                    "pairs": [ { "value": "17" } ]
+                  }, 
+                  {
+                    "labels": [ { "text": "Yoro" } ], 
+                    "pairs": [ { "value": "18" } ]
+                  }
+                ]
+              }
+            ]
+          }, 
+          {
+            "name": "H_MUN", 
+            "labels": [ { "text": "Municipio" } ], 
+            "contentType": "numeric", 
+            "start": 4, 
+            "length": 4, 
+            "zeroFill": true
+          }, 
+          {
+            "name": "H_SEGMENTO", 
+            "labels": [ { "text": "Numero de Segmento" } ], 
+            "contentType": "numeric", 
+            "start": 8, 
+            "length": 5, 
+            "zeroFill": true
+          }, 
+          {
+            "name": "H_ESTRUCTURA", 
+            "labels": [ { "text": "Estructura" } ], 
+            "contentType": "numeric", 
+            "start": 13, 
+            "length": 4, 
+            "zeroFill": true
+          }, 
+          {
+            "name": "H_VIVIENDA", 
+            "labels": [ { "text": "No. De vivienda en el recorrido" } ], 
+            "contentType": "numeric", 
+            "start": 17, 
+            "length": 3, 
+            "zeroFill": true
+          }
+        ]
+      }, 
+      "records": [
+        {
+          "name": "VIVIENDA", 
+          "labels": [ { "text": "VIVIENDA" } ], 
+          "recordType": "1", 
+          "occurrences": {
+            "required": true, 
+            "maximum": 1
+          }, 
+          "items": [
+            {
+              "name": "V_V01_TIPO_VIV", 
+              "labels": [ { "text": "TIPO DE LA VIVIENDA" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "V_V01_TIPO_VIV_VS1", 
+                  "labels": [ { "text": "TIPO DE LA VIVIENDA" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Casa Independiente" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Apartamento" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Cuarto en meson o cuarteria" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Local no construido para vivienda" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Rancho (de materiales naturales)" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Casa improvisada (material de desecho)" } ], 
+                      "pairs": [ { "value": "6" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Otro tipo de vivienda particular" } ], 
+                      "pairs": [ { "value": "7" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Hotel, pensión, casa de huéspedes" } ], 
+                      "pairs": [ { "value": "8" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Hospital, sanatorio o clínica" } ], 
+                      "pairs": [ { "value": "9" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Orfanato" } ], 
+                      "pairs": [ { "value": "10" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Asilo" } ], 
+                      "pairs": [ { "value": "11" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Cuartel, batallón o posta policial" } ], 
+                      "pairs": [ { "value": "12" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Prisión o reformatorio" } ], 
+                      "pairs": [ { "value": "13" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Otro tipo de vivienda colectiva" } ], 
+                      "pairs": [ { "value": "14" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Sin vivienda" } ], 
+                      "pairs": [ { "value": "15" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "V_V02_PAREDES_VIV", 
+              "labels": [ { "text": "MATERIAL DE LAS PAREDES" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "V_V02_PAREDES_VIV_VS1", 
+                  "labels": [ { "text": "MATERIAL DE LAS PAREDES" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Bloque o ladrillo" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Adobe" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Madera " } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Piedra rajada o cantera" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Bahareque, vara, palo, caña o similar" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Material prefabricado" } ], 
+                      "pairs": [ { "value": "6" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Material de desecho" } ], 
+                      "pairs": [ { "value": "7" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Otro" } ], 
+                      "pairs": [ { "value": "8" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "V_V03_TECHO_VIV", 
+              "labels": [ { "text": "MATERIAL DEL TECHO" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "V_V03_TECHO_VIV_VS1", 
+                  "labels": [ { "text": "MATERIAL DEL TECHO" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Lamina de zinc" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Teja de barro" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Lámina de aluzinc" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Lamina de asbesto" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Concreto" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Madera, paja, palma o similar" } ], 
+                      "pairs": [ { "value": "6" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Material de desecho" } ], 
+                      "pairs": [ { "value": "7" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Otro" } ], 
+                      "pairs": [ { "value": "8" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "V_V04_OCUP_VIV", 
+              "labels": [ { "text": "OCUPACIÓN DE LA VIVIENDA" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "V_V04_OCUP_VIV_VS1", 
+                  "labels": [ { "text": "OCUPACIÓN DE LA VIVIENDA" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Con personas presentes" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Con personas ausentes" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Para alquilar o vender" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "De uso temporal" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "En construcción o reparación" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Destruida o inhabitable" } ], 
+                      "pairs": [ { "value": "6" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Otro" } ], 
+                      "pairs": [ { "value": "7" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "V_V05_PISO_VIV", 
+              "labels": [ { "text": "MATERIAL PREDOMINANTE EN EL PISO" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "V_V05_PISO_VIV_VS1", 
+                  "labels": [ { "text": "MATERIAL PREDOMINANTE EN EL PISO" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Ladrillo de cemento, cerámica, granito o barro, parqué" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Plancha de cemento" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Tablones de madera" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Tierra" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Otro" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "V_V06_DISPO_AGUA", 
+              "labels": [ { "text": "DISPONIBILIDAD DE AGUA" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "V_V06_DISPO_AGUA_VS1", 
+                  "labels": [ { "text": "DISPONIBILIDAD DE AGUA" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Por tuberia dentro de la vivienda" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Por tuberia fuera de la vivienda, pero dentro del edificio lote o propiedad" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Por tuberia fuera del edificio, lote o propiedad" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No recibe agua por tuberia sino por otros medios" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "V_V07_PROV_AGUA", 
+              "labels": [ { "text": "PROVENIENCIA DEL AGUA" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "V_V07_PROV_AGUA_VS1", 
+                  "labels": [ { "text": "PROVENIENCIA DEL AGUA" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Del sistema público" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Del sistema privado" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "De pozo con bomba" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "De pozo malacate" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "De otra vivienda" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "De río, riachuelo, manantial, ojo de agua, etc." } ], 
+                      "pairs": [ { "value": "6" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "De vendedor o repartidor ambulante" } ], 
+                      "pairs": [ { "value": "7" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Otro" } ], 
+                      "pairs": [ { "value": "8" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "V_V08_ACC_ALUM", 
+              "labels": [ { "text": "ACCESO A ELECTRICIDAD" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "V_V08_ACC_ALUM_VS1", 
+                  "labels": [ { "text": "ACCESO A ELECTRICIDAD" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Electricidad del sistema publico" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Electricidad del sistema privado" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Electricidad de motor propio" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Candil o lampara de gas (kerosene)" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Vela" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Ocote" } ], 
+                      "pairs": [ { "value": "6" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Panel solar" } ], 
+                      "pairs": [ { "value": "7" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Otro" } ], 
+                      "pairs": [ { "value": "8" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "V_V10_ELIM_BASURA", 
+              "labels": [ { "text": "ELIMINACIÓN DE RESIDUOS SÓLIDOS" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "V_V10_ELIM_BASURA_VS1", 
+                  "labels": [ { "text": "ELIMINACIÓN DE RESIDUOS SÓLIDOS" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Recolección domiciliaria (tren de aseo)" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "La deposita en contenedores" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "La entierra" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "La prepara para abono" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "La quema" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "La tira en cualquier lugar" } ], 
+                      "pairs": [ { "value": "6" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Otro" } ], 
+                      "pairs": [ { "value": "7" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "V_V12_PIEZAS_VIV", 
+              "labels": [ { "text": "PIEZAS DE LA VIVIENDA" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "V_V12_PIEZAS_VIV_VS1", 
+                  "labels": [ { "text": "PIEZAS DE LA VIVIENDA" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Piezas" } ], 
+                      "pairs": [ { "range": [ "1", "20" ] } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "V_V13_IDEN_HOGAR", 
+              "labels": [ { "text": "PRESUPUESTO COMÚN" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "V_V13_IDEN_HOGAR_VS1", 
+                  "labels": [ { "text": "PRESUPUESTO COMÚN" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": " Si, es un solo hogar" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No, hay más de un hogar" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "V_V14_GRU_HOGAR", 
+              "labels": [ { "text": "NÚMERO DE HOGARES" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "V_V14_GRU_HOGAR_VS1", 
+                  "labels": [ { "text": "NÚMERO DE HOGARES" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Hogares" } ], 
+                      "pairs": [ { "range": [ "1", "9" ] } ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }, 
+        {
+          "name": "HOGARES", 
+          "labels": [ { "text": "HOGARES" } ], 
+          "recordType": "H", 
+          "occurrences": {
+            "required": true, 
+            "maximum": 1
+          }, 
+          "items": [
+            {
+              "name": "H_H07_PIEZA_DORMIR", 
+              "labels": [ { "text": "PIEZAS PARA DORMIR" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": true
+            }, 
+            {
+              "name": "H_H01_COCINA_HOG", 
+              "labels": [ { "text": "LUGAR PARA COCINAR ALIMENTOS" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_H01_COCINA_HOG_VS1", 
+                  "labels": [ { "text": "LUGAR PARA COCINAR ALIMENTOS" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Si" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_H02_USO_COCINA", 
+              "labels": [ { "text": "USO EXCLUSIVO DE LA COCINA" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_H02_USO_COCINA_VS1", 
+                  "labels": [ { "text": "USO EXCLUSIVO DE LA COCINA" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Si" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_H03_COCINAN_CON", 
+              "labels": [ { "text": "COMBUSTIBLE PARA COCINAR" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_H03_COCINAN_CON_VS1", 
+                  "labels": [ { "text": "COMBUSTIBLE PARA COCINAR" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Leña?" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Gas (kerosene)?" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Gas propano (chimbo LPG)? " } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Electricidad?" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Biogas?" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Otro?" } ], 
+                      "pairs": [ { "value": "6" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No cocina" } ], 
+                      "pairs": [ { "value": "7" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_H04_SANIT_HOG", 
+              "labels": [ { "text": "SERVICIO SANITARIO" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_H04_SANIT_HOG_VS1", 
+                  "labels": [ { "text": "SERVICIO SANITARIO" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Inodoro conectado a alcantarilla" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Inodoro conectado a pozo séptico" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Inodoro con desagüe al río, laguna, mar o lago" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Taza campesina (agua tirada con balde)" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Letrina con pozo séptico" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Letrina con pozo negro" } ], 
+                      "pairs": [ { "value": "6" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Otro" } ], 
+                      "pairs": [ { "value": "7" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No tiene" } ], 
+                      "pairs": [ { "value": "8" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_H05_SANI_EXCLU", 
+              "labels": [ { "text": "USO EXCLUSIVO DEL SERVICIO SANITARIO" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_H05_SANI_EXCLU_VS1", 
+                  "labels": [ { "text": "USO EXCLUSIVO DEL SERVICIO SANITARIO" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Si" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_H06_N_REFRI", 
+              "labels": [ { "text": "REFRIGERADORA" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_H06_N_REFRI_VS1", 
+                  "labels": [ { "text": "REFRIGERADORA" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Si" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_H06_O_ESTUFA", 
+              "labels": [ { "text": "ESTUFA DE 4 HORNILLAS" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_H06_O_ESTUFA_VS1", 
+                  "labels": [ { "text": "ESTUFA DE 4 HORNILLAS" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Si" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_H06_P_AIRE", 
+              "labels": [ { "text": "AIRE ACONDICIONADO" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_H06_P_AIRE_VS1", 
+                  "labels": [ { "text": "AIRE ACONDICIONADO" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Si" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_H06_M_LAVADORA", 
+              "labels": [ { "text": "LAVADORA ELECTRICA" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_H06_M_LAVADORA_VS1", 
+                  "labels": [ { "text": "LAVADORA ELECTRICA" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Si" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_H06_A_RADIO", 
+              "labels": [ { "text": "RADIO" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_H06_A_RADIO_VS1", 
+                  "labels": [ { "text": "RADIO" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Si" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_H06_B_TV_1", 
+              "labels": [ { "text": "TIENE TELEVISOR" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_H06_B_TV_1_VS1", 
+                  "labels": [ { "text": "TIENE TELEVISOR" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Si" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_H06_C_PC_1", 
+              "labels": [ { "text": "TIENE COMPUTADORAS" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_H06_C_PC_1_VS1", 
+                  "labels": [ { "text": "TIENE COMPUTADORAS" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Si" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_H06_E_TEL_FIJO", 
+              "labels": [ { "text": "TELÉFONO FIJO " } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_H06_E_TEL_FIJO_VS1", 
+                  "labels": [ { "text": "TELÉFONO FIJO " } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Si" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_H06_F_TEL_CEL_1", 
+              "labels": [ { "text": "TIENE TELEFONOS" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_H06_F_TEL_CEL_1_VS1", 
+                  "labels": [ { "text": "TIENE TELEFONOS" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Si" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_H06_G_INTERNET", 
+              "labels": [ { "text": "INTERNET " } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_H06_G_INTERNET_VS1", 
+                  "labels": [ { "text": "INTERNET " } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Si" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_H06_H_CABLE", 
+              "labels": [ { "text": "CABLE " } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_H06_H_CABLE_VS1", 
+                  "labels": [ { "text": "CABLE " } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Si" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_H06_I_CARRO_1", 
+              "labels": [ { "text": "TIENE CARRO O AUTOMOVILES " } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_H06_I_CARRO_1_VS1", 
+                  "labels": [ { "text": "TIENE CARRO O AUTOMOVILES " } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Si" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_H06_J_MOTO_1", 
+              "labels": [ { "text": "TIENE MOTOCICLETAS O MOTOTAXI" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_H06_J_MOTO_1_VS1", 
+                  "labels": [ { "text": "TIENE MOTOCICLETAS O MOTOTAXI" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Si" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_H06_K_LANCHA_1", 
+              "labels": [ { "text": "TIENE LANCHA" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_H06_K_LANCHA_1_VS1", 
+                  "labels": [ { "text": "TIENE LANCHA" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Si" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "V_V11_TEN_VIVI", 
+              "labels": [ { "text": "TENENCIA DE LA VIVIENDA" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "V_V11_TEN_VIVI_VS1", 
+                  "labels": [ { "text": "TENENCIA DE LA VIVIENDA" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Propia" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Propia, pagando a plazos" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Ocupada sin permiso del propietario" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Alquilada" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Prestada o cedida sin pago" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Cedida por servicios de trabajo" } ], 
+                      "pairs": [ { "value": "6" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_H08_ACTIVIDADES", 
+              "labels": [ { "text": "ACTIVIDADES " } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_H08_ACTIVIDADES_VS1", 
+                  "labels": [ { "text": "ACTIVIDADES " } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Cultivo de granos(maíz, frijol, café u otros), Tubérculos(yuca, malanga u otros), Hortalizas, Caña, Árboles frutales o maderables?" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Cría de ganado(vacuno, porcino u otros), Aves de corral(gallinas, patas u otros), Abejas, Cría de peces o camarones?" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Cultivo de plantas medicinales u ornamentales " } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_M01_TOTAL_MUERT", 
+              "labels": [ { "text": "TIEMPO DE REFERENCIA MORTALIDAD" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_M01_TOTAL_MUERT_VS1", 
+                  "labels": [ { "text": "TIEMPO DE REFERENCIA MORTALIDAD" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Si" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_M01_CUANTAS", 
+              "labels": [ { "text": "¿CUANTAS PERSONAS?" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_M01_CUANTAS_VS1", 
+                  "labels": [ { "text": "¿CUANTAS PERSONAS?" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "" } ], 
+                      "pairs": [ { "range": [ "1", "10" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No sabe" } ], 
+                      "pairs": [ { "value": "98" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Rechazó" } ], 
+                      "pairs": [ { "value": "99" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_CH00_NUM_PER", 
+              "labels": [ { "text": "NUMERO DE PERSONA" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_CH00_NUM_PER_VS1", 
+                  "labels": [ { "text": "NUMERO DE PERSONA" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "" } ], 
+                      "pairs": [ { "range": [ "1", "50" ] } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_CH06_VERIFICA", 
+              "labels": [ { "text": "MIEMBROS DEL HOGAR" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_CH06_VERIFICA_VS1", 
+                  "labels": [ { "text": "MIEMBROS DEL HOGAR" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Si" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_E01_NUM_EMI", 
+              "labels": [ { "text": "NÚMERO DE EMIGRANTES" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_E01_NUM_EMI_VS1", 
+                  "labels": [ { "text": "NÚMERO DE EMIGRANTES" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "" } ], 
+                      "pairs": [ { "range": [ "1", "20" ] } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_E06_REME_ANIO", 
+              "labels": [ { "text": "REMESAS" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_E06_REME_ANIO_VS1", 
+                  "labels": [ { "text": "REMESAS" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Si" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No sabe/No responde" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_E01_TIEMPO", 
+              "labels": [ { "text": "TIEMPO DE REFERENCIA" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_E01_TIEMPO_VS1", 
+                  "labels": [ { "text": "TIEMPO DE REFERENCIA" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Si" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_E07_NO_DEST", 
+              "labels": [ { "text": "DESAPARECIDOS" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_E07_NO_DEST_VS1", 
+                  "labels": [ { "text": "DESAPARECIDOS" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Si" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }, 
+        {
+          "name": "EMIGRACION", 
+          "labels": [ { "text": "EMIGRACION" } ], 
+          "recordType": "E", 
+          "occurrences": {
+            "required": false, 
+            "maximum": 15
+          }, 
+          "items": [
+            {
+              "name": "ORDEN_E", 
+              "labels": [ { "text": "ORDEN EMIGRACION" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": true
+            }, 
+            {
+              "name": "H_E02_SEXO_EMI", 
+              "labels": [ { "text": "SEXO DEL EMIGRANTE" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_E02_SEXO_EMI_VS1", 
+                  "labels": [ { "text": "SEXO DEL EMIGRANTE" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Hombre" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Mujer" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_E03_EDAD_EMI", 
+              "labels": [ { "text": "EDAD DEL EMIGRANTE" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_E03_EDAD_EMI_VS1", 
+                  "labels": [ { "text": "EDAD DEL EMIGRANTE" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "" } ], 
+                      "pairs": [ { "range": [ "0", "99" ] } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_E04_ANIO_EMI", 
+              "labels": [ { "text": "ANIO DE SALIDA" } ], 
+              "contentType": "numeric", 
+              "length": 4, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_E04_ANIO_EMI_VS1", 
+                  "labels": [ { "text": "ANIO DE SALIDA" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "" } ], 
+                      "pairs": [ { "range": [ "2014", "2024" ] } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_E05_RESI_EMI", 
+              "labels": [ { "text": "PAÍS DE RESIDENCIA DEL EMIGRANTE" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_E05_RESI_EMI_VS1", 
+                  "labels": [ { "text": "PAÍS DE RESIDENCIA DEL EMIGRANTE" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Estados Unidos" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "España" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "México" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Guatemala" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Otro" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No sabe " } ], 
+                      "pairs": [ { "value": "6" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "ADD_ANOTHER_EMIGRACION", 
+              "labels": [ { "text": "AGREGAR OTRO A EMIGRACION" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "ADD_ANOTHER_EMIGRACION_VS1", 
+                  "labels": [ { "text": "AGREGAR OTRO A EMIGRACION" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Sí, hay personas adicionales" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No, la lista de personas está completa." } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }, 
+        {
+          "name": "PERSONAS", 
+          "labels": [ { "text": "PERSONAS" } ], 
+          "recordType": "P", 
+          "occurrences": {
+            "required": true, 
+            "maximum": 30
+          }, 
+          "items": [
+            {
+              "name": "ORDEN", 
+              "labels": [ { "text": "ORDEN PERSONAS" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": true
+            }, 
+            {
+              "name": "H_CH000_NPER", 
+              "labels": [ { "text": "ORDEN " } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_CH000_NPER_VS1", 
+                  "labels": [ { "text": "ORDEN " } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "" } ], 
+                      "pairs": [ { "range": [ "1", "50" ] } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_CH00_NPER", 
+              "labels": [ { "text": "NUMERO DE PERSONA" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_CH00_NPER_VS1", 
+                  "labels": [ { "text": "NUMERO DE PERSONA" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "" } ], 
+                      "pairs": [ { "range": [ "1", "50" ] } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_CH01_NOMBRE", 
+              "labels": [ { "text": "NOMBRE" } ], 
+              "contentType": "alpha", 
+              "length": 30
+            }, 
+            {
+              "name": "H_CH05_PARENTESCO", 
+              "labels": [ { "text": "PARENTESCO" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_CH05_PARENTESCO_VS1", 
+                  "labels": [ { "text": "PARENTESCO" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Jefe, jefa o persona de referencia" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Cónyuge o pareja" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Hijo(a)" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Hijastro(a)" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Yerno o nuera" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Nieto(a)" } ], 
+                      "pairs": [ { "value": "6" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Padre o madre" } ], 
+                      "pairs": [ { "value": "7" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Suegro(a)" } ], 
+                      "pairs": [ { "value": "8" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Hermano(a)" } ], 
+                      "pairs": [ { "value": "9" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Cuñado(a)" } ], 
+                      "pairs": [ { "value": "10" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Sobrino(a)" } ], 
+                      "pairs": [ { "value": "11" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Abuela o abuelo de persona de referencia" } ], 
+                      "pairs": [ { "value": "12" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Empledo (a) doméstico (a) con dormida adentro " } ], 
+                      "pairs": [ { "value": "13" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Otro pariente" } ], 
+                      "pairs": [ { "value": "14" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Otro no pariente" } ], 
+                      "pairs": [ { "value": "15" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_CH04_SEXO", 
+              "labels": [ { "text": "SEXO" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_CH04_SEXO_VS1", 
+                  "labels": [ { "text": "SEXO" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Hombre" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Mujer" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_CH02_EDAD", 
+              "labels": [ { "text": "EDAD" } ], 
+              "contentType": "numeric", 
+              "length": 3, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_CH02_EDAD_VS1", 
+                  "labels": [ { "text": "EDAD" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "" } ], 
+                      "pairs": [ { "range": [ "0", "120" ] } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_CH03A_ANIO", 
+              "labels": [ { "text": "FECHA DE NACIMIENTO" } ], 
+              "contentType": "numeric", 
+              "length": 4, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_CH03A_ANIO_VS1", 
+                  "labels": [ { "text": "FECHA DE NACIMIENTO" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "" } ], 
+                      "pairs": [ { "range": [ "1904", "2024" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No  sabe" } ], 
+                      "pairs": [ { "value": "9999" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_CH03B_MES", 
+              "labels": [ { "text": "FECHA DE NACIMIENTO" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_CH03B_MES_VS1", 
+                  "labels": [ { "text": "FECHA DE NACIMIENTO" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Enero" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Febrero" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Marzo" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Abril" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Mayo" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Junio " } ], 
+                      "pairs": [ { "value": "6" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Julio" } ], 
+                      "pairs": [ { "value": "7" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Agosto" } ], 
+                      "pairs": [ { "value": "8" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Septiembre" } ], 
+                      "pairs": [ { "value": "9" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Octubre" } ], 
+                      "pairs": [ { "value": "10" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Noviembre" } ], 
+                      "pairs": [ { "value": "11" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Diciembre" } ], 
+                      "pairs": [ { "value": "12" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No sabe " } ], 
+                      "pairs": [ { "value": "99" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_CH03C_DIA", 
+              "labels": [ { "text": "FECHA DE NACIMIENTO" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_CH03C_DIA_VS1", 
+                  "labels": [ { "text": "FECHA DE NACIMIENTO" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "" } ], 
+                      "pairs": [ { "range": [ "1", "31" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No sabe" } ], 
+                      "pairs": [ { "value": "99" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_P03_PUEBLO", 
+              "labels": [ { "text": "PUEBLO INDÍGENA" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_P03_PUEBLO_VS1", 
+                  "labels": [ { "text": "PUEBLO INDÍGENA" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Maya-Chortí" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Lenca" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Miskitu" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Nahualt" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Pesh" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Tolupán" } ], 
+                      "pairs": [ { "value": "6" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Tawahka" } ], 
+                      "pairs": [ { "value": "7" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Chorotega" } ], 
+                      "pairs": [ { "value": "8" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Garifuna" } ], 
+                      "pairs": [ { "value": "9" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Negro de habla inglesa" } ], 
+                      "pairs": [ { "value": "10" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Creole" } ], 
+                      "pairs": [ { "value": "11" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Otro pueblo indígena" } ], 
+                      "pairs": [ { "value": "12" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No sabe / No responde" } ], 
+                      "pairs": [ { "value": "13" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_P03_ESPECIFIQUE", 
+              "labels": [ { "text": "ESPECIFIQUE PUEBLO INDIGENA" } ], 
+              "contentType": "alpha", 
+              "length": 30
+            }, 
+            {
+              "name": "H_P04_LENGUAMAT", 
+              "labels": [ { "text": "LENGUA MATERNA" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_P04_LENGUAMAT_VS1", 
+                  "labels": [ { "text": "LENGUA MATERNA" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Miskitu" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Pesh" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Tolupán" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Tawahka" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Garífuna" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Inglés (isleño)" } ], 
+                      "pairs": [ { "value": "6" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Maya-chorti" } ], 
+                      "pairs": [ { "value": "7" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Español" } ], 
+                      "pairs": [ { "value": "8" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Otro" } ], 
+                      "pairs": [ { "value": "9" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_P05A_MATERNA", 
+              "labels": [ { "text": "LENGUA MATERNA" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_P05A_MATERNA_VS1", 
+                  "labels": [ { "text": "LENGUA MATERNA" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Si" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_P05B_ESPANOL", 
+              "labels": [ { "text": "AISLAMIENTO LINGÜÍSTICO" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_P05B_ESPANOL_VS1", 
+                  "labels": [ { "text": "AISLAMIENTO LINGÜÍSTICO" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Si" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No " } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_P06A_VER", 
+              "labels": [ { "text": "DIFICULTAD PARA VER" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_P06A_VER_VS1", 
+                  "labels": [ { "text": "DIFICULTAD PARA VER" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "No tiene ninguna dificultad" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Tiene cierta dificultad" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Tiene mucha dificultad" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Le resulta imposible" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No sabe/ No contesta" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_P06B_VER_C", 
+              "labels": [ { "text": "CAUSA DE DIFICULTAD PARA VER" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_P06B_VER_C_VS1", 
+                  "labels": [ { "text": "CAUSA DE DIFICULTAD PARA VER" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "De nacimiento?" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Enfermedad?" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Accidente?" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Edad avanzada?" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Otra causa?" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_P07A_OIR", 
+              "labels": [ { "text": "DIFICULTAD PARA OIR" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_P07A_OIR_VS1", 
+                  "labels": [ { "text": "DIFICULTAD PARA OIR" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "No tiene ninguna dificultad" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Tiene cierta dificultad" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Tiene mucha dificultad" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Le resulta imposible" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No sabe/ No contesta" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_P07B_OIR_C", 
+              "labels": [ { "text": "CAUSA DE DIFICULTAD PARA OIR" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_P07B_OIR_C_VS1", 
+                  "labels": [ { "text": "CAUSA DE DIFICULTAD PARA OIR" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "De nacimiento?" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Enfermedad?" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Accidente?" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Edad avanzada?" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Otra causa?" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_P08A_CAMINAR", 
+              "labels": [ { "text": "DIFICULTAD PARA CAMINAR" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_P08A_CAMINAR_VS1", 
+                  "labels": [ { "text": "DIFICULTAD PARA CAMINAR" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "No tiene ninguna dificultad" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Tiene cierta dificultad" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Tiene mucha dificultad" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Le resulta imposible" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No sabe/ No contesta" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_P08D_CAMINAR_E", 
+              "labels": [ { "text": "DEFICIENCIA CAMINAR" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_P08D_CAMINAR_E_VS1", 
+                  "labels": [ { "text": "DEFICIENCIA CAMINAR" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "De nacimiento?" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Enfermedad?" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Accidente?" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Edad avanzada?" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Otra causa?" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_P09A_RECORDAR", 
+              "labels": [ { "text": "DIFICULTAD PARA RECORDAR O CONCENTRARSE" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_P09A_RECORDAR_VS1", 
+                  "labels": [ { "text": "DIFICULTAD PARA RECORDAR O CONCENTRARSE" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "No tiene ninguna deficiencia o dificultad" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Tiene cierta deficiencia o dificultad" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Tiene mucha deficiencia o dificultad" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Le resulta imposible" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No sabe/ No contesta" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_P09B_RECORDAR_C", 
+              "labels": [ { "text": "CAUSA DE DIFICULTAD PARA RECORDAR O CONCENTRARSE " } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_P09B_RECORDAR_C_VS1", 
+                  "labels": [ { "text": "CAUSA DE DIFICULTAD PARA RECORDAR O CONCENTRARSE " } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "De nacimiento?" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Enfermedad?" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Accidente?" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Edad avanzada?" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Otra causa?" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_P10A_VALERSE", 
+              "labels": [ { "text": "DIFICULTAD PARA VALERSE POR SI MISMO" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_P10A_VALERSE_VS1", 
+                  "labels": [ { "text": "DIFICULTAD PARA VALERSE POR SI MISMO" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "No tiene ninguna dificultad" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Tiene cierta dificultad" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Tiene mucha dificultad" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Le resulta imposible" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No sabe/ No contesta" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_P10B_VALERSE_C", 
+              "labels": [ { "text": "CAUSA DE DIFICULTAD PARA VALERSE POR SI MISMO" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_P10B_VALERSE_C_VS1", 
+                  "labels": [ { "text": "CAUSA DE DIFICULTAD PARA VALERSE POR SI MISMO" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "De nacimiento?" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Enfermedad?" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Accidente?" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Edad avanzada?" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Otra causa?" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_P11A_COMUNI", 
+              "labels": [ { "text": "DIFICULTAD PARA COMUNICARSE" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_P11A_COMUNI_VS1", 
+                  "labels": [ { "text": "DIFICULTAD PARA COMUNICARSE" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "No tiene ninguna deficiencia o dificultad?" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Tiene alguna deficiencia o dificultad?" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Tiene mucha deficiencia o dificultad?" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Le resulta imposible" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No sabe/ No contesta" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_P11B_COMUNI_C", 
+              "labels": [ { "text": "CAUSA DE DIFICULTAD PARA COMUNICARSE" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_P11B_COMUNI_C_VS1", 
+                  "labels": [ { "text": "CAUSA DE DIFICULTAD PARA COMUNICARSE" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "De nacimiento?" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Enfermedad?" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Accidente?" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Edad avanzada?" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Otra causa?" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_P14A_LUGAR_NA", 
+              "labels": [ { "text": "LUGAR DE NACIMIENTO" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_P14A_LUGAR_NA_VS1", 
+                  "labels": [ { "text": "LUGAR DE NACIMIENTO" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "En este municipio" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "En otro municipio dentro del país" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "En otro país" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_P14B_NA_OTR_MU", 
+              "labels": [ { "text": "LUGAR DE NACIMIENTO MUNICIPIO" } ], 
+              "contentType": "numeric", 
+              "length": 4, 
+              "zeroFill": true
+            }, 
+            {
+              "name": "H_P14C_NA_PAIS", 
+              "labels": [ { "text": "LUGAR DE NACIMIENTO PAIS" } ], 
+              "contentType": "numeric", 
+              "length": 3, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_P14C_NA_PAIS_VS1", 
+                  "labels": [ { "text": "LUGAR DE NACIMIENTO PAIS" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "AFGANISTAN" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "AKROTIRI" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "ALBANIA" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "ALEMANIA" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "ANDORRA" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "ANGOLA" } ], 
+                      "pairs": [ { "value": "6" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "ANGUILA" } ], 
+                      "pairs": [ { "value": "7" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "ANTARTIDA" } ], 
+                      "pairs": [ { "value": "8" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "ANTIGUA Y BARBUDA" } ], 
+                      "pairs": [ { "value": "9" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "ARABIA SAUDI" } ], 
+                      "pairs": [ { "value": "10" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "ARCTIC OCEAN" } ], 
+                      "pairs": [ { "value": "11" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "ARGELIA" } ], 
+                      "pairs": [ { "value": "12" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "ARGENTINA" } ], 
+                      "pairs": [ { "value": "13" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "ARMENIA" } ], 
+                      "pairs": [ { "value": "14" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "ARUBA" } ], 
+                      "pairs": [ { "value": "15" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "ASHMORE AND CARTIER ISLANDS" } ], 
+                      "pairs": [ { "value": "16" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "ATLANTIC OCEAN" } ], 
+                      "pairs": [ { "value": "17" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "AUSTRALIA" } ], 
+                      "pairs": [ { "value": "18" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "AUSTRIA" } ], 
+                      "pairs": [ { "value": "19" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "AZERBAIYAN" } ], 
+                      "pairs": [ { "value": "20" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "BAHAMAS" } ], 
+                      "pairs": [ { "value": "21" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "BAHRAIN" } ], 
+                      "pairs": [ { "value": "22" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "BANGLADESH" } ], 
+                      "pairs": [ { "value": "23" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "BARBADOS" } ], 
+                      "pairs": [ { "value": "24" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "BELGICA" } ], 
+                      "pairs": [ { "value": "25" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "BELICE" } ], 
+                      "pairs": [ { "value": "26" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "BENIN" } ], 
+                      "pairs": [ { "value": "27" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "BERMUDAS" } ], 
+                      "pairs": [ { "value": "28" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "BIELORRUSIA" } ], 
+                      "pairs": [ { "value": "29" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "BIRMANIA; MYANMAR" } ], 
+                      "pairs": [ { "value": "30" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "BOLIVIA" } ], 
+                      "pairs": [ { "value": "31" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "BOSNIA Y HERCEGOVINA" } ], 
+                      "pairs": [ { "value": "32" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "BOTSUANA" } ], 
+                      "pairs": [ { "value": "33" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "BRASIL" } ], 
+                      "pairs": [ { "value": "34" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "BRUNEI" } ], 
+                      "pairs": [ { "value": "35" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "BULGARIA" } ], 
+                      "pairs": [ { "value": "36" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "BURKINA FASO" } ], 
+                      "pairs": [ { "value": "37" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "BURUNDI" } ], 
+                      "pairs": [ { "value": "38" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "BUTAN" } ], 
+                      "pairs": [ { "value": "39" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "CABO VERDE" } ], 
+                      "pairs": [ { "value": "40" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "CAMBOYA" } ], 
+                      "pairs": [ { "value": "41" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "CAMERUN" } ], 
+                      "pairs": [ { "value": "42" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "CANADA" } ], 
+                      "pairs": [ { "value": "43" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "CHAD" } ], 
+                      "pairs": [ { "value": "44" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "CHILE" } ], 
+                      "pairs": [ { "value": "45" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "CHINA" } ], 
+                      "pairs": [ { "value": "46" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "CHIPRE" } ], 
+                      "pairs": [ { "value": "47" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "CLIPPERTON ISLAND" } ], 
+                      "pairs": [ { "value": "48" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "COLOMBIA" } ], 
+                      "pairs": [ { "value": "49" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "COMORAS" } ], 
+                      "pairs": [ { "value": "50" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "CONGO" } ], 
+                      "pairs": [ { "value": "51" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "CORAL SEA ISLANDS" } ], 
+                      "pairs": [ { "value": "52" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "COREA DEL NORTE" } ], 
+                      "pairs": [ { "value": "53" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "COREA DEL SUR" } ], 
+                      "pairs": [ { "value": "54" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "COSTA DE MARFIL" } ], 
+                      "pairs": [ { "value": "55" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "COSTA RICA" } ], 
+                      "pairs": [ { "value": "56" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "CROACIA" } ], 
+                      "pairs": [ { "value": "57" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "CUBA" } ], 
+                      "pairs": [ { "value": "58" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "CURACAO" } ], 
+                      "pairs": [ { "value": "59" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "DHEKELIA" } ], 
+                      "pairs": [ { "value": "60" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "DINAMARCA" } ], 
+                      "pairs": [ { "value": "61" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "DOMINICA" } ], 
+                      "pairs": [ { "value": "62" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "ECUADOR" } ], 
+                      "pairs": [ { "value": "63" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "EGIPTO" } ], 
+                      "pairs": [ { "value": "64" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "EL SALVADOR" } ], 
+                      "pairs": [ { "value": "65" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "EL VATICANO" } ], 
+                      "pairs": [ { "value": "66" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "EMIRATOS ARABES UNIDOS" } ], 
+                      "pairs": [ { "value": "67" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "ERITREA" } ], 
+                      "pairs": [ { "value": "68" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "ESLOVAQUIA" } ], 
+                      "pairs": [ { "value": "69" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "ESLOVENIA" } ], 
+                      "pairs": [ { "value": "70" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "ESPAÑA" } ], 
+                      "pairs": [ { "value": "71" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "ESTADOS UNIDOS" } ], 
+                      "pairs": [ { "value": "72" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "ESTONIA" } ], 
+                      "pairs": [ { "value": "73" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "ETIOPIA" } ], 
+                      "pairs": [ { "value": "74" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "FILIPINAS" } ], 
+                      "pairs": [ { "value": "75" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "FINLANDIA" } ], 
+                      "pairs": [ { "value": "76" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "FIYI" } ], 
+                      "pairs": [ { "value": "77" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "FRANCIA" } ], 
+                      "pairs": [ { "value": "78" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "GABON" } ], 
+                      "pairs": [ { "value": "79" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "GAMBIA" } ], 
+                      "pairs": [ { "value": "80" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "GAZA STRIP" } ], 
+                      "pairs": [ { "value": "81" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "GEORGIA" } ], 
+                      "pairs": [ { "value": "82" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "GHANA" } ], 
+                      "pairs": [ { "value": "83" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "GIBRALTAR" } ], 
+                      "pairs": [ { "value": "84" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "GRANADA" } ], 
+                      "pairs": [ { "value": "85" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "GRECIA" } ], 
+                      "pairs": [ { "value": "86" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "GROENLANDIA" } ], 
+                      "pairs": [ { "value": "87" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "GUAM" } ], 
+                      "pairs": [ { "value": "88" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "GUATEMALA" } ], 
+                      "pairs": [ { "value": "89" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "GUERNSEY" } ], 
+                      "pairs": [ { "value": "90" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "GUINEA" } ], 
+                      "pairs": [ { "value": "91" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "GUINEA ECUATORIAL" } ], 
+                      "pairs": [ { "value": "92" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "GUINEA-BISSAU" } ], 
+                      "pairs": [ { "value": "93" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "GUYANA" } ], 
+                      "pairs": [ { "value": "94" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "HAITI" } ], 
+                      "pairs": [ { "value": "95" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "HONDURAS" } ], 
+                      "pairs": [ { "value": "96" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "HONG KONG" } ], 
+                      "pairs": [ { "value": "97" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "HUNGRIA" } ], 
+                      "pairs": [ { "value": "98" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "INDIA" } ], 
+                      "pairs": [ { "value": "99" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "INDIAN OCEAN" } ], 
+                      "pairs": [ { "value": "100" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "INDONESIA" } ], 
+                      "pairs": [ { "value": "101" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "IRAN" } ], 
+                      "pairs": [ { "value": "102" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "IRAQ" } ], 
+                      "pairs": [ { "value": "103" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "IRLANDA" } ], 
+                      "pairs": [ { "value": "104" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "ISLA BOUVET" } ], 
+                      "pairs": [ { "value": "105" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "ISLA CHRISTMAS" } ], 
+                      "pairs": [ { "value": "106" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "ISLA NORFOLK" } ], 
+                      "pairs": [ { "value": "107" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "ISLANDIA" } ], 
+                      "pairs": [ { "value": "108" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "ISLAS CAIMAN" } ], 
+                      "pairs": [ { "value": "109" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "ISLAS COCOS" } ], 
+                      "pairs": [ { "value": "110" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "ISLAS COOK" } ], 
+                      "pairs": [ { "value": "111" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "ISLAS FEROE" } ], 
+                      "pairs": [ { "value": "112" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "ISLAS GEORGIA DEL SUR Y SANDWICH DEL SUR" } ], 
+                      "pairs": [ { "value": "113" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "ISLAS HEARD Y MCDONALD" } ], 
+                      "pairs": [ { "value": "114" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "ISLAS MALVINAS" } ], 
+                      "pairs": [ { "value": "115" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "ISLAS MARIANAS DEL NORTE" } ], 
+                      "pairs": [ { "value": "116" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "ISLAS MARSHALL" } ], 
+                      "pairs": [ { "value": "117" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "ISLAS PITCAIRN" } ], 
+                      "pairs": [ { "value": "118" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "ISLAS SALOMON" } ], 
+                      "pairs": [ { "value": "119" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "ISLAS TURCAS Y CAICOS" } ], 
+                      "pairs": [ { "value": "120" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "ISLAS VIRGENES AMERICANAS" } ], 
+                      "pairs": [ { "value": "121" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "ISLAS VIRGENES BRITANICAS" } ], 
+                      "pairs": [ { "value": "122" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "ISRAEL" } ], 
+                      "pairs": [ { "value": "123" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "ITALIA" } ], 
+                      "pairs": [ { "value": "124" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "JAMAICA" } ], 
+                      "pairs": [ { "value": "125" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "JAN MAYEN" } ], 
+                      "pairs": [ { "value": "126" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "JAPON" } ], 
+                      "pairs": [ { "value": "127" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "JERSEY" } ], 
+                      "pairs": [ { "value": "128" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "JORDANIA" } ], 
+                      "pairs": [ { "value": "129" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "KAZAJISTAN" } ], 
+                      "pairs": [ { "value": "130" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "KENIA" } ], 
+                      "pairs": [ { "value": "131" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "KIRGUIZISTAN" } ], 
+                      "pairs": [ { "value": "132" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "KIRIBATI" } ], 
+                      "pairs": [ { "value": "133" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "KOSOVO" } ], 
+                      "pairs": [ { "value": "134" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "KUWAIT" } ], 
+                      "pairs": [ { "value": "135" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "LAOS" } ], 
+                      "pairs": [ { "value": "136" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "LESOTO" } ], 
+                      "pairs": [ { "value": "137" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "LETONIA" } ], 
+                      "pairs": [ { "value": "138" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "LIBANO" } ], 
+                      "pairs": [ { "value": "139" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "LIBERIA" } ], 
+                      "pairs": [ { "value": "140" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "LIBIA" } ], 
+                      "pairs": [ { "value": "141" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "LIECHTENSTEIN" } ], 
+                      "pairs": [ { "value": "142" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "LITUANIA" } ], 
+                      "pairs": [ { "value": "143" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "LUXEMBURGO" } ], 
+                      "pairs": [ { "value": "144" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "MACAO" } ], 
+                      "pairs": [ { "value": "145" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "MACEDONIA" } ], 
+                      "pairs": [ { "value": "146" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "MADAGASCAR" } ], 
+                      "pairs": [ { "value": "147" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "MALASIA" } ], 
+                      "pairs": [ { "value": "148" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "MALAUI" } ], 
+                      "pairs": [ { "value": "149" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "MALDIVAS" } ], 
+                      "pairs": [ { "value": "150" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "MALI" } ], 
+                      "pairs": [ { "value": "151" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "MALTA" } ], 
+                      "pairs": [ { "value": "152" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "MAN, ISLE OF" } ], 
+                      "pairs": [ { "value": "153" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "MARRUECOS" } ], 
+                      "pairs": [ { "value": "154" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "MAURICIO" } ], 
+                      "pairs": [ { "value": "155" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "MAURITANIA" } ], 
+                      "pairs": [ { "value": "156" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "MEXICO" } ], 
+                      "pairs": [ { "value": "157" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "MICRONESIA" } ], 
+                      "pairs": [ { "value": "158" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "MOLDAVIA" } ], 
+                      "pairs": [ { "value": "159" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "MONACO" } ], 
+                      "pairs": [ { "value": "160" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "MONGOLIA" } ], 
+                      "pairs": [ { "value": "161" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "MONTENEGRO" } ], 
+                      "pairs": [ { "value": "162" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "MONTSERRAT" } ], 
+                      "pairs": [ { "value": "163" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "MOZAMBIQUE" } ], 
+                      "pairs": [ { "value": "164" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "MUNDO" } ], 
+                      "pairs": [ { "value": "165" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "NAMIBIA" } ], 
+                      "pairs": [ { "value": "166" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "NAURU" } ], 
+                      "pairs": [ { "value": "167" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "NAVASSA ISLAND" } ], 
+                      "pairs": [ { "value": "168" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "NEPAL" } ], 
+                      "pairs": [ { "value": "169" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "NICARAGUA" } ], 
+                      "pairs": [ { "value": "170" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "NIGER" } ], 
+                      "pairs": [ { "value": "171" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "NIGERIA" } ], 
+                      "pairs": [ { "value": "172" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "NIUE" } ], 
+                      "pairs": [ { "value": "173" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "NORUEGA" } ], 
+                      "pairs": [ { "value": "174" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "NUEVA CALEDONIA" } ], 
+                      "pairs": [ { "value": "175" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "NUEVA ZELANDA" } ], 
+                      "pairs": [ { "value": "176" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "OMAN" } ], 
+                      "pairs": [ { "value": "177" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "PACIFIC OCEAN" } ], 
+                      "pairs": [ { "value": "178" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "PAISES BAJOS" } ], 
+                      "pairs": [ { "value": "179" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "PAKISTAN" } ], 
+                      "pairs": [ { "value": "180" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "PALAOS" } ], 
+                      "pairs": [ { "value": "181" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "PANAMA" } ], 
+                      "pairs": [ { "value": "182" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "PAPUA-NUEVA GUINEA" } ], 
+                      "pairs": [ { "value": "183" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "PARACEL ISLANDS" } ], 
+                      "pairs": [ { "value": "184" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "PARAGUAY" } ], 
+                      "pairs": [ { "value": "185" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "PERU" } ], 
+                      "pairs": [ { "value": "186" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "POLINESIA FRANCESA" } ], 
+                      "pairs": [ { "value": "187" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "POLONIA" } ], 
+                      "pairs": [ { "value": "188" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "PORTUGAL" } ], 
+                      "pairs": [ { "value": "189" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "PUERTO RICO" } ], 
+                      "pairs": [ { "value": "190" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "QATAR" } ], 
+                      "pairs": [ { "value": "191" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "REINO UNIDO" } ], 
+                      "pairs": [ { "value": "192" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "REPUBLICA CENTROAFRICANA" } ], 
+                      "pairs": [ { "value": "193" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "REPUBLICA DEMOCRATICA DEL CONGO" } ], 
+                      "pairs": [ { "value": "194" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "REPUBLICA DOMINICANA" } ], 
+                      "pairs": [ { "value": "195" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "RUANDA" } ], 
+                      "pairs": [ { "value": "196" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "RUMANIA" } ], 
+                      "pairs": [ { "value": "197" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "RUSIA" } ], 
+                      "pairs": [ { "value": "198" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "SAHARA OCCIDENTAL" } ], 
+                      "pairs": [ { "value": "199" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "SAMOA" } ], 
+                      "pairs": [ { "value": "200" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "SAMOA AMERICANA" } ], 
+                      "pairs": [ { "value": "201" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "SAN BARTOLOME" } ], 
+                      "pairs": [ { "value": "202" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "SAN CRISTOBAL Y NIEVES" } ], 
+                      "pairs": [ { "value": "203" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "SAN MARINO" } ], 
+                      "pairs": [ { "value": "204" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "SAN MARTIN" } ], 
+                      "pairs": [ { "value": "205" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "SAN PEDRO Y MIQUELON" } ], 
+                      "pairs": [ { "value": "206" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "SAN VICENTE Y LAS GRANADINAS" } ], 
+                      "pairs": [ { "value": "207" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "SANTA HELENA" } ], 
+                      "pairs": [ { "value": "208" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "SANTA LUCIA" } ], 
+                      "pairs": [ { "value": "209" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "SANTO TOME Y PRINCIPE" } ], 
+                      "pairs": [ { "value": "210" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "SENEGAL" } ], 
+                      "pairs": [ { "value": "211" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "SERBIA" } ], 
+                      "pairs": [ { "value": "212" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "SEYCHELLES" } ], 
+                      "pairs": [ { "value": "213" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "SIERRA LEONA" } ], 
+                      "pairs": [ { "value": "214" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "SINGAPUR" } ], 
+                      "pairs": [ { "value": "215" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "SINT MAARTEN" } ], 
+                      "pairs": [ { "value": "216" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "SIRIA" } ], 
+                      "pairs": [ { "value": "217" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "SOMALIA" } ], 
+                      "pairs": [ { "value": "218" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "SOUTHERN OCEAN" } ], 
+                      "pairs": [ { "value": "219" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "SPRATLY ISLANDS" } ], 
+                      "pairs": [ { "value": "220" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "SRI LANKA" } ], 
+                      "pairs": [ { "value": "221" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "SUAZILANDIA" } ], 
+                      "pairs": [ { "value": "222" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "SUDAFRICA" } ], 
+                      "pairs": [ { "value": "223" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "SUDAN" } ], 
+                      "pairs": [ { "value": "224" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "SUDAN DEL SUR" } ], 
+                      "pairs": [ { "value": "225" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "SUECIA" } ], 
+                      "pairs": [ { "value": "226" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "SUIZA" } ], 
+                      "pairs": [ { "value": "227" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "SURINAM" } ], 
+                      "pairs": [ { "value": "228" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "SVALBARD Y JAN MAYEN" } ], 
+                      "pairs": [ { "value": "229" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "TAILANDIA" } ], 
+                      "pairs": [ { "value": "230" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "TAIWAN" } ], 
+                      "pairs": [ { "value": "231" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "TANZANIA" } ], 
+                      "pairs": [ { "value": "232" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "TAYIKISTAN" } ], 
+                      "pairs": [ { "value": "233" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "TERRITORIO BRITANICO DEL OCEANO INDICO" } ], 
+                      "pairs": [ { "value": "234" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "TERRITORIOS AUSTRALES FRANCESES" } ], 
+                      "pairs": [ { "value": "235" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "TIMOR ORIENTAL" } ], 
+                      "pairs": [ { "value": "236" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "TOGO" } ], 
+                      "pairs": [ { "value": "237" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "TOKELAU" } ], 
+                      "pairs": [ { "value": "238" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "TONGA" } ], 
+                      "pairs": [ { "value": "239" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "TRINIDAD Y TOBAGO" } ], 
+                      "pairs": [ { "value": "240" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "TUNEZ" } ], 
+                      "pairs": [ { "value": "241" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "TURKMENISTAN" } ], 
+                      "pairs": [ { "value": "242" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "TURQUIA" } ], 
+                      "pairs": [ { "value": "243" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "TUVALU" } ], 
+                      "pairs": [ { "value": "244" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "UCRANIA" } ], 
+                      "pairs": [ { "value": "245" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "UGANDA" } ], 
+                      "pairs": [ { "value": "246" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "UNION EUROPEA" } ], 
+                      "pairs": [ { "value": "247" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "URUGUAY" } ], 
+                      "pairs": [ { "value": "248" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "UZBEKISTAN" } ], 
+                      "pairs": [ { "value": "249" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "VANUATU" } ], 
+                      "pairs": [ { "value": "250" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "VENEZUELA" } ], 
+                      "pairs": [ { "value": "251" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "VIETNAM" } ], 
+                      "pairs": [ { "value": "252" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "WAKE ISLAND" } ], 
+                      "pairs": [ { "value": "253" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "WALLIS Y FUTUNA" } ], 
+                      "pairs": [ { "value": "254" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "WEST BANK" } ], 
+                      "pairs": [ { "value": "255" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "YEMEN" } ], 
+                      "pairs": [ { "value": "256" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "YIBUTI" } ], 
+                      "pairs": [ { "value": "257" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "ZAMBIA" } ], 
+                      "pairs": [ { "value": "258" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "ZIMBABUE" } ], 
+                      "pairs": [ { "value": "259" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_P15A_LLEGA_ANIO", 
+              "labels": [ { "text": "AÑO DE LLEGADA AL PAIS" } ], 
+              "contentType": "numeric", 
+              "length": 4, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_P15A_LLEGA_ANIO_VS1", 
+                  "labels": [ { "text": "AÑO DE LLEGADA AL PAIS" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "" } ], 
+                      "pairs": [ { "range": [ "1904", "2024" ] } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_P15B_LLEGA_MES", 
+              "labels": [ { "text": "MES DE LLEGADA AL PAIS" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_P15B_LLEGA_MES_VS1", 
+                  "labels": [ { "text": "MES DE LLEGADA AL PAIS" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Enero" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Febrero" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Marzo" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Abril" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Mayo" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Junio " } ], 
+                      "pairs": [ { "value": "6" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Julio" } ], 
+                      "pairs": [ { "value": "7" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Agosto" } ], 
+                      "pairs": [ { "value": "8" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Septiembre" } ], 
+                      "pairs": [ { "value": "9" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Octubre" } ], 
+                      "pairs": [ { "value": "10" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Noviembre" } ], 
+                      "pairs": [ { "value": "11" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Diciembre" } ], 
+                      "pairs": [ { "value": "12" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_P16A_MUNI_SIEMP", 
+              "labels": [ { "text": "LUGAR DE RESIDENCIA MUNI SIEMPRE" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_P16A_MUNI_SIEMP_VS1", 
+                  "labels": [ { "text": "LUGAR DE RESIDENCIA MUNI SIEMPRE" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Si, en este municipio" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No, anteriormente vivía en otro municipio dentro de Honduras" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No, anteriormente vivía en otro país" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_P16B_MUNI_VIVIA", 
+              "labels": [ { "text": "LUGAR DE RESIDENCIA MUNI OTRO" } ], 
+              "contentType": "numeric", 
+              "length": 4, 
+              "zeroFill": true
+            }, 
+            {
+              "name": "H_P16C_VIVIA_PAIS", 
+              "labels": [ { "text": "LUGAR DE RESIDENCIA PAIS" } ], 
+              "contentType": "numeric", 
+              "length": 3, 
+              "zeroFill": true
+            }, 
+            {
+              "name": "H_P17_MUNIC_ANIO", 
+              "labels": [ { "text": "LLEGADA MUNICIPIO" } ], 
+              "contentType": "numeric", 
+              "length": 4, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_P17_MUNIC_ANIO_VS1", 
+                  "labels": [ { "text": "LLEGADA MUNICIPIO" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "" } ], 
+                      "pairs": [ { "range": [ "1904", "2024" ] } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_P18_RAZON_VINO", 
+              "labels": [ { "text": "RAZÓN DE MIGRACIÓN" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_P18_RAZON_VINO_VS1", 
+                  "labels": [ { "text": "RAZÓN DE MIGRACIÓN" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Búsqueda de empleo" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Traslado por trabajo (incluido el servicio militar)" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Educación y formación" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Matrimonio, reunificación familiar o formación familiar (incluye los niños que migran con los padres)" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Inseguridad ciudadana y violencia" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Pérdida de cosechas" } ], 
+                      "pairs": [ { "value": "6" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Desastres naturales" } ], 
+                      "pairs": [ { "value": "7" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Otros" } ], 
+                      "pairs": [ { "value": "8" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_P19_INSCRI_RNP", 
+              "labels": [ { "text": "INSCRIPCIÓN EN RNP" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_P19_INSCRI_RNP_VS1", 
+                  "labels": [ { "text": "INSCRIPCIÓN EN RNP" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Si" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No sabe" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_P20_ESTA_CIVIL", 
+              "labels": [ { "text": "ESTADO CIVIL" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_P20_ESTA_CIVIL_VS1", 
+                  "labels": [ { "text": "ESTADO CIVIL" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Casado(a)" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Unión libre, unión de hecho (juntado)" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Separado(a)" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Divorciado(a)" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Viudo(a)" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Soltero(a) (nunca casado)" } ], 
+                      "pairs": [ { "value": "6" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_P22_ASISTEN_EDU", 
+              "labels": [ { "text": "ASISTENCIA CENTRO EDUCATIVO" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_P22_ASISTEN_EDU_VS1", 
+                  "labels": [ { "text": "ASISTENCIA CENTRO EDUCATIVO" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Si" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No sabe" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_P23A_NIVEL_EDUC", 
+              "labels": [ { "text": "NIVEL GRADO APROBADO" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_P23A_NIVEL_EDUC_VS1", 
+                  "labels": [ { "text": "NIVEL GRADO APROBADO" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Ninguno" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Alfabetización" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Pre-básica" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Básica" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Media/Diversificado" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Técnico Superior" } ], 
+                      "pairs": [ { "value": "6" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Superior no universitaria" } ], 
+                      "pairs": [ { "value": "7" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Universitaria" } ], 
+                      "pairs": [ { "value": "8" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Especialidad" } ], 
+                      "pairs": [ { "value": "9" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Maestría" } ], 
+                      "pairs": [ { "value": "10" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Doctorado" } ], 
+                      "pairs": [ { "value": "11" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No sabe" } ], 
+                      "pairs": [ { "value": "99" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_P23B_GRADO_EDUC", 
+              "labels": [ { "text": "GRADO APROBADO" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_P23B_GRADO_EDUC_VS1", 
+                  "labels": [ { "text": "GRADO APROBADO" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "" } ], 
+                      "pairs": [ { "range": [ "1", "8" ] } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_P25_ULTI_CARR", 
+              "labels": [ { "text": "CARRERA O ESPECIALIDAD DEL ÚLTIMO AÑO APROBADO" } ], 
+              "contentType": "alpha", 
+              "length": 40
+            }, 
+            {
+              "name": "H_P24_FIN_CARR", 
+              "labels": [ { "text": "FINALIZO CARRERA" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_P24_FIN_CARR_VS1", 
+                  "labels": [ { "text": "FINALIZO CARRERA" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Si" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_P21_LEER_ESCRI", 
+              "labels": [ { "text": "LEER Y ESCRIBIR" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_P21_LEER_ESCRI_VS1", 
+                  "labels": [ { "text": "LEER Y ESCRIBIR" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Si" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No sabe" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_P26_A_PC", 
+              "labels": [ { "text": "USO DE COMPUTADOR" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_P26_A_PC_VS1", 
+                  "labels": [ { "text": "USO DE COMPUTADOR" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Si" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_P26_B_USO_TABLE", 
+              "labels": [ { "text": "USO DE TABLET" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_P26_B_USO_TABLE_VS1", 
+                  "labels": [ { "text": "USO DE TABLET" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Si" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_P26_C_USO_CEL", 
+              "labels": [ { "text": "USO TELEFONO CELULAR" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_P26_C_USO_CEL_VS1", 
+                  "labels": [ { "text": "USO TELEFONO CELULAR" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Si" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_P26_D_USO_INTER", 
+              "labels": [ { "text": "USO DE INTERNET" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_P26_D_USO_INTER_VS1", 
+                  "labels": [ { "text": "USO DE INTERNET" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Si" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_P27_SEM_PAS_TRA", 
+              "labels": [ { "text": "IDENTIFICACIÓN DE EMPLEADOS" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_P27_SEM_PAS_TRA_VS1", 
+                  "labels": [ { "text": "IDENTIFICACIÓN DE EMPLEADOS" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Trabajó en la parcela propia o de su familia o se dedicó a actividades de pesca por su cuenta" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Trabajó para alguien más por pago en dinero o especie (empleado, jornalero, aprendiz)" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Trabajó en algún otro tipo de negocio" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Ninguna de las anteriores" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_P28_AUTOCONSUMO", 
+              "labels": [ { "text": "PRODUCTOS DE AUTOCONSUMO" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_P28_AUTOCONSUMO_VS1", 
+                  "labels": [ { "text": "PRODUCTOS DE AUTOCONSUMO" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Solamente para la venta (actividad comercial a cambio de dinero)" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "En su mayoría para la venta (actividad comercial a cambio de dinero)" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "En su mayoría para el consumo familiar" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Solamente para el consumo familiar" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_P29_ACTI_REALI", 
+              "labels": [ { "text": "ACTIVIDADES DE LA SEMANA PASADA" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_P29_ACTI_REALI_VS1", 
+                  "labels": [ { "text": "ACTIVIDADES DE LA SEMANA PASADA" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Hizo algún otro negocio o actividad por pago, al menos por una hora (preparar y vender comida, lavar ropa ajena, cortar pelo, vender productos por catálogo, reparar ropa)" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Tenía un trabajo por pago o un negocio pero estaba temporalmente ausente" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Ayudó sin pago en un negocio familiar" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No hizo ninguna actividad para generar ingresos aunque fuera por una hora" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No sabe" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_P30_BUSC_TRAB", 
+              "labels": [ { "text": "BUSQUEDA DE EMPLEO" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_P30_BUSC_TRAB_VS1", 
+                  "labels": [ { "text": "BUSQUEDA DE EMPLEO" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Si" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_P31_DISPONIBI", 
+              "labels": [ { "text": "DISPONIBILIDAD" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_P31_DISPONIBI_VS1", 
+                  "labels": [ { "text": "DISPONIBILIDAD" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Si" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_P32_ACT_PRINC", 
+              "labels": [ { "text": "ACTIVIDAD PRINCIPAL" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_P32_ACT_PRINC_VS1", 
+                  "labels": [ { "text": "ACTIVIDAD PRINCIPAL" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Cuida del hogar y la familia" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Estudia" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Pasantía o entrenamiento sin pago" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Siembra o pesca para producir comida para la familia " } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Voluntariado, servicio comunitario o trabajo caritativo sin pago" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Retirado, pensionado o jubilado" } ], 
+                      "pairs": [ { "value": "6" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Enfermo de larga duración, incapacitado o lesionado (sin pensión)" } ], 
+                      "pairs": [ { "value": "7" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Rentistas" } ], 
+                      "pairs": [ { "value": "8" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Otro" } ], 
+                      "pairs": [ { "value": "9" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_P33_OCUPACION", 
+              "labels": [ { "text": "OCUPACIÓN PRINCIPAL" } ], 
+              "contentType": "alpha", 
+              "length": 30, 
+              "valueSets": [
+                {
+                  "name": "H_P33_OCUPACION_VS1", 
+                  "labels": [ { "text": "OCUPACIÓN PRINCIPAL" } ], 
+                  "values": []
+                }
+              ]
+            }, 
+            {
+              "name": "H_P34_INDUSTRIA", 
+              "labels": [ { "text": "INDUSTRIA" } ], 
+              "contentType": "numeric", 
+              "length": 4, 
+              "zeroFill": true
+            }, 
+            {
+              "name": "H_P35_LUGAR_TRAB", 
+              "labels": [ { "text": "TRABAJO MOVILIDAD" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_P35_LUGAR_TRAB_VS1", 
+                  "labels": [ { "text": "TRABAJO MOVILIDAD" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Desde casa" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "En un ubicación fija fuera de la casa" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Sin ubicación fija" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_P36_MUNI_TRAB", 
+              "labels": [ { "text": "MUNICIPIO LUGAR DE TRABAJO" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_P36_MUNI_TRAB_VS1", 
+                  "labels": [ { "text": "MUNICIPIO LUGAR DE TRABAJO" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "En este municipio" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "En otro municipio dentro del país" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "En otro país" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_P37_OT_MUN_TRAB", 
+              "labels": [ { "text": "TRABAJO OTRO MUNICIPIO DENTRO DEL PAÍS" } ], 
+              "contentType": "numeric", 
+              "length": 4, 
+              "zeroFill": true
+            }, 
+            {
+              "name": "H_P38_OT_PAI_TRAB", 
+              "labels": [ { "text": "TRABAJO OTRO PAÍS" } ], 
+              "contentType": "numeric", 
+              "length": 3, 
+              "zeroFill": true
+            }, 
+            {
+              "name": "H_P39_TRABAJ_COMO", 
+              "labels": [ { "text": "CATEGORIA OCUPACIONAL" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_P39_TRABAJ_COMO_VS1", 
+                  "labels": [ { "text": "CATEGORIA OCUPACIONAL" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Empleado publico" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Empleado privado" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Empleado doméstico" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Aprendiz o pasante con pago" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Empleador, patrón o socio activo (con empleados contratados permanentes)" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Trabajador independiente o por cuenta propia" } ], 
+                      "pairs": [ { "value": "6" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Ayudante (sin pago) en empresa familiar" } ], 
+                      "pairs": [ { "value": "7" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Otro" } ], 
+                      "pairs": [ { "value": "8" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_P40_ACTI_AGRO", 
+              "labels": [ { "text": "ACTIVIDADES AGROPECUARIAS PARA GENERAR BIENES DE AUTOCONSUMO" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_P40_ACTI_AGRO_VS1", 
+                  "labels": [ { "text": "ACTIVIDADES AGROPECUARIAS PARA GENERAR BIENES DE AUTOCONSUMO" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "No hizo ninguna" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Agricultura o cultivo de alimentos en un lote o jardín" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Recolección de leña o agua" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Cría de animales de granja" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Pesca" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Caza o recolección de frutos silvestres" } ], 
+                      "pairs": [ { "value": "6" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_F01_HIJAS", 
+              "labels": [ { "text": "NÚMERO HIJAS" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_F01_HIJAS_VS1", 
+                  "labels": [ { "text": "NÚMERO HIJAS" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "" } ], 
+                      "pairs": [ { "range": [ "0", "20" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No sabe" } ], 
+                      "pairs": [ { "value": "99" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_F02_HIJAS_VIVAS", 
+              "labels": [ { "text": "HIJAS VIVAS" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_F02_HIJAS_VIVAS_VS1", 
+                  "labels": [ { "text": "HIJAS VIVAS" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "" } ], 
+                      "pairs": [ { "range": [ "0", "20" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No sabe" } ], 
+                      "pairs": [ { "value": "99" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_F03_HIJAS_MUERT", 
+              "labels": [ { "text": "HIJAS MUERTAS" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_F03_HIJAS_MUERT_VS1", 
+                  "labels": [ { "text": "HIJAS MUERTAS" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "" } ], 
+                      "pairs": [ { "range": [ "0", "20" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No sabe" } ], 
+                      "pairs": [ { "value": "99" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_F04_HIJOS", 
+              "labels": [ { "text": "NÚMERO HIJOS" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_F04_HIJOS_VS1", 
+                  "labels": [ { "text": "NÚMERO HIJOS" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "" } ], 
+                      "pairs": [ { "range": [ "0", "20" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No sabe" } ], 
+                      "pairs": [ { "value": "99" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_F05_HIJOS_VIVOS", 
+              "labels": [ { "text": "HIJOS VIVOS" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_F05_HIJOS_VIVOS_VS1", 
+                  "labels": [ { "text": "HIJOS VIVOS" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "" } ], 
+                      "pairs": [ { "range": [ "0", "20" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No sabe" } ], 
+                      "pairs": [ { "value": "99" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_F06_HIJOS_MUERT", 
+              "labels": [ { "text": "HIJOS MUERTOS" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_F06_HIJOS_MUERT_VS1", 
+                  "labels": [ { "text": "HIJOS MUERTOS" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "" } ], 
+                      "pairs": [ { "range": [ "0", "20" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No sabe" } ], 
+                      "pairs": [ { "value": "99" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_F07_ANIO_NAC", 
+              "labels": [ { "text": "FECHA DE NACIMIENTO (ANIO) HIJA O HIJO" } ], 
+              "contentType": "numeric", 
+              "length": 4, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_F07_ANIO_NAC_VS1", 
+                  "labels": [ { "text": "FECHA DE NACIMIENTO (ANIO) HIJA O HIJO" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "" } ], 
+                      "pairs": [ { "range": [ "1904", "2024" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No sabe" } ], 
+                      "pairs": [ { "value": "9999" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_F07_MES_NAC", 
+              "labels": [ { "text": "FECHA DE NACIMIENTO (MES) HIJA O HIJO" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_F07_MES_NAC_VS1", 
+                  "labels": [ { "text": "FECHA DE NACIMIENTO (MES) HIJA O HIJO" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Enero" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Febrero" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Marzo" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Abril" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Mayo" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Junio" } ], 
+                      "pairs": [ { "value": "6" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Julio" } ], 
+                      "pairs": [ { "value": "7" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Agosto" } ], 
+                      "pairs": [ { "value": "8" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Septiembre" } ], 
+                      "pairs": [ { "value": "9" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Octubre" } ], 
+                      "pairs": [ { "value": "10" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Noviembre" } ], 
+                      "pairs": [ { "value": "11" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Deciembre" } ], 
+                      "pairs": [ { "value": "12" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No sabe" } ], 
+                      "pairs": [ { "value": "99" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_F08_SEXO_ULTIMO", 
+              "labels": [ { "text": "SEXO DE LA ULTIMA HIJA O HIJO NACIDO VIVO" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_F08_SEXO_ULTIMO_VS1", 
+                  "labels": [ { "text": "SEXO DE LA ULTIMA HIJA O HIJO NACIDO VIVO" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Hombre" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Mujer" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No sabe" } ], 
+                      "pairs": [ { "value": "9" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_F09_VIVO_ULTIMO", 
+              "labels": [ { "text": "ULTIMA HIJA O HIJO VIVO" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_F09_VIVO_ULTIMO_VS1", 
+                  "labels": [ { "text": "ULTIMA HIJA O HIJO VIVO" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Si" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No sabe" } ], 
+                      "pairs": [ { "value": "9" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_F10_EDAD_EMB", 
+              "labels": [ { "text": "EDAD PRIMER EMBARAZO" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_F10_EDAD_EMB_VS1", 
+                  "labels": [ { "text": "EDAD PRIMER EMBARAZO" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "" } ], 
+                      "pairs": [ { "range": [ "10", "49" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No sabe" } ], 
+                      "pairs": [ { "value": "99" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_ADD_ANOTHER_PERSONA", 
+              "labels": [ { "text": "AGREGAR OTRO A COMPOSICION DEL HOGAR" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_ADD_ANOTHER_PERSONA_VS1", 
+                  "labels": [ { "text": "AGREGAR OTRO A COMPOSICION DEL HOGAR" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Sí, hay personas adicionales" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No, la lista de personas está completa." } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }, 
+        {
+          "name": "MORTALIDAD", 
+          "labels": [ { "text": "MORTALIDAD" } ], 
+          "recordType": "M", 
+          "occurrences": {
+            "required": false, 
+            "maximum": 15
+          }, 
+          "items": [
+            {
+              "name": "ORDEN_M", 
+              "labels": [ { "text": "ORDEN MORTALIDAD" } ], 
+              "contentType": "numeric", 
+              "length": 2, 
+              "zeroFill": true
+            }, 
+            {
+              "name": "H_M02_MORT_NOMBRE", 
+              "labels": [ { "text": "NOMBRE Y APELLIDO DEL FALLECIDO" } ], 
+              "contentType": "alpha", 
+              "length": 30
+            }, 
+            {
+              "name": "H_M03_MORT_SEXO", 
+              "labels": [ { "text": "SEXO DEL FALLECIDO" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_M03_MORT_SEXO_VS1", 
+                  "labels": [ { "text": "SEXO DEL FALLECIDO" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Hombre" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Mujer" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_M04_MORT_EDAD", 
+              "labels": [ { "text": "EDAD DEL FALLECIDO " } ], 
+              "contentType": "numeric", 
+              "length": 3, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_M04_MORT_EDAD_VS1", 
+                  "labels": [ { "text": "EDAD DEL FALLECIDO " } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "" } ], 
+                      "pairs": [ { "range": [ "0", "120" ] } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No sabe" } ], 
+                      "pairs": [ { "value": "999" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_MM01_MORT_CAUSA", 
+              "labels": [ { "text": "MUERTE CAUSADA POR ACCIDENTE, VIOLENCIA,HOMICIDIO O SUICIDIO" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_MM01_MORT_CAUSA_VS1", 
+                  "labels": [ { "text": "MUERTE CAUSADA POR ACCIDENTE, VIOLENCIA,HOMICIDIO O SUICIDIO" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Si" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_MM02_MORT_EMB", 
+              "labels": [ { "text": "EMBARAZADA FALLECIO " } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_MM02_MORT_EMB_VS1", 
+                  "labels": [ { "text": "EMBARAZADA FALLECIO " } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Si" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_MM03_MORT_EMB", 
+              "labels": [ { "text": "CAUSA" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_MM03_MORT_EMB_VS1", 
+                  "labels": [ { "text": "CAUSA" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Embarazo" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Parto " } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Puerperio " } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Otra causa" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "name": "H_ADD_ANOTHER_MORTALIDAD", 
+              "labels": [ { "text": "AGREGAR OTRA PERSONA" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_ADD_ANOTHER_MORTALIDAD_VS1", 
+                  "labels": [ { "text": "AGREGAR OTRA PERSONA" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Sí, hay personas adicionales" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "No, la lista de personas está completa." } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }, 
+        {
+          "name": "METADATOS", 
+          "labels": [ { "text": "Metadatos" } ], 
+          "recordType": "X", 
+          "occurrences": {
+            "required": true, 
+            "maximum": 1
+          }, 
+          "items": [
+            {
+              "name": "H_START_INTERVIEW_TIME", 
+              "labels": [ { "text": "Start Interview Time" } ], 
+              "contentType": "numeric", 
+              "length": 10, 
+              "zeroFill": true
+            }, 
+            {
+              "name": "H_END_INTERVIEW_TIME", 
+              "labels": [ { "text": "End Interview Time" } ], 
+              "contentType": "numeric", 
+              "length": 10, 
+              "zeroFill": true
+            }, 
+            {
+              "name": "H_CONCLUIR_ENTREVISTA", 
+              "labels": [ { "text": "Concluir entrevista" } ], 
+              "contentType": "numeric", 
+              "length": 1, 
+              "zeroFill": true, 
+              "valueSets": [
+                {
+                  "name": "H_CONCLUIR_ENTREVISTA_VS1", 
+                  "labels": [ { "text": "Concluir entrevista" } ], 
+                  "values": [
+                    {
+                      "labels": [ { "text": "Concluir entrevista" } ], 
+                      "pairs": [ { "value": "1" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Revisar sección hogares" } ], 
+                      "pairs": [ { "value": "2" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Revisar sección emigracion" } ], 
+                      "pairs": [ { "value": "3" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Revisar sección composicion" } ], 
+                      "pairs": [ { "value": "4" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Revisar sección personas" } ], 
+                      "pairs": [ { "value": "5" } ]
+                    }, 
+                    {
+                      "labels": [ { "text": "Revisar sección mortalidad" } ], 
+                      "pairs": [ { "value": "6" } ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
